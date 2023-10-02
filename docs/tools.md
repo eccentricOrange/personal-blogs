@@ -43,3 +43,44 @@ While Git is exceedingly popular, you should know that there are alternatives, s
 [_Tech Talk: Linus Torvalds on git_, YT video by Google](https://www.youtube.com/watch?v=4XpnKHJAok8)
 
 Linus Torvalds visits Google to share his thoughts on git, the source control management system he created.
+
+## 2.   Docker, for isolating your development environment
+[Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other.
+
+![Dependency hell, xkcd 1579](https://imgs.xkcd.com/comics/tech_loops.png)
+
+Docker is a tool that allows you to isolate your development environment from the rest of your computer. You start from a bare environment; for example, an installation of a Ubuntu system:
+
+```DOCKERFILE
+FROM ubuntu:22.04
+```
+
+There are many more options, such as different OSes, images with certain toolchains built-in, lightweight ones et cetera. You can check out the [Docker Registry](https://hub.docker.com/) for a complete listing.
+
+Crucially, whenever you start from a certain image, so does everyone else using your "Dockerfile". This means that you can be sure that everyone is starting from the same point, and that everyone has the same environment. This is great for reproducibility, and for making sure that your code works on other people's computers.
+
+### Resources to understand what Docker is
+*   [Official Docker documentation](https://docs.docker.com/get-started/overview/)
+*   [Wikipedia article on Docker](https://en.wikipedia.org/wiki/Docker_(software))
+*   [_Docker Explained in 100 Seconds_, YouTube video by Fireship](https://www.youtube.com/watch?v=Gjnup-PuquQ)
+*   [IBM article on Docker](https://www.ibm.com/topics/docker)
+
+### Resources to learn how to use Docker
+*   [Official Docker documentation](https://docs.docker.com/get-started/)
+*   [_Containerize your application_, article by Docker](https://docs.docker.com/get-started/02_our_app/)
+*   [_Docker Tutorial for Beginners_, YouTube playlist by Net Ninja](https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
+*   [_you need to learn Docker RIGHT NOW!! // Docker Containers 101_, YouTube video by NetworkChuck](https://www.youtube.com/watch?v=eGz9DS-aIeY)
+*   [_Docker Crash Course for Absolute Beginners \[NEW\]_, YouTube video by TechWorld with Nana](https://www.youtube.com/watch?v=pg19Z8LL06w)
+
+#### My recommended way to learn Docker
+Follow some of these resources to understand concepts and install the tool. Even play around with it a bit.
+
+But don't spend too much time on it, as there isn't really much you can do with Docker without an appropriate project. Instead, begin to get into using virtual hosts, such as through [GitHub Codespaces](https://www.youtube.com/watch?v=pg19Z8LL06w), where Docker is going to be genuine useful.
+
+Look into using Docker Devcontainers with [VS Code](https://code.visualstudio.com/). Initially, you can rely on the pre-built Dockerfiles and images, and then you can start to build your own as you get more comfortable with it. Read more: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
+
+### Interesting tidbits
+*   [_Top 8 Docker Best Practices for using Docker in Production_, video by TechWorld with Nana](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
+*   [Docker Composer](https://docs.docker.com/compose/), for managing multiple containers simultaneously
+*   [Docker Swarm](https://docs.docker.com/engine/swarm/), for managing multiple containers across multiple hosts
+*   [Kubernetes](https://kubernetes.io/), for managing multiple containers across multiple hosts, with more features than Docker Swarm
