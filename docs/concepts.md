@@ -2,6 +2,11 @@
 
 These are things I learnt during classes, projects, or workshop, and I find them cool, fascinating, or useful. I hope you do too.
 
+{: .note-title }
+> A note on CS/programming concepts
+> 
+> I maintain a separate website for CS/programming concepts.. Even though it was designed for the CAIE Computer Science syllabus, it is useful for anyone learning CS/programming. You can find it at [https://eccentricOrange.github.io/CAIE-Computer-Science/](https://eccentricOrange.github.io/CAIE-Computer-Science/). I won't cover as many CS/programming concepts here.
+
 ## 1.   Differential pairs
 Think about a signal traveling in a wire. Specifically, think of a digital signal, which is just a voltage that is either high or low (1 or 0, 5V or 0V etc). This is called a **single-ended signal**, because it is referenced to a single point, usually ground.
 
