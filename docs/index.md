@@ -1,7 +1,7 @@
 # About this page
 
 {: .note-title }
-> The CAIE A-Level and [I]GCSE Computer Science website
+> **The CAIE A-Level and [I]GCSE Computer Science website**
 > 
 > If you came here looking for those resources, you can find them at [https://eccentricOrange.github.io/CAIE-Computer-Science/](https://eccentricOrange.github.io/CAIE-Computer-Science/).
 

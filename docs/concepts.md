@@ -3,7 +3,7 @@
 These are things I learnt during classes, projects, or workshop, and I find them cool, fascinating, or useful. I hope you do too.
 
 {: .note-title }
-> A note on CS/programming concepts
+> **A note on CS/programming concepts**
 > 
 > I maintain a separate website for CS/programming concepts.. Even though it was designed for the CAIE Computer Science syllabus, it is useful for anyone learning CS/programming. You can find it at [https://eccentricOrange.github.io/CAIE-Computer-Science/](https://eccentricOrange.github.io/CAIE-Computer-Science/). I won't cover as many CS/programming concepts here.
 
