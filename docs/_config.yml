@@ -1,4 +1,4 @@
-remote_theme: poole/hyde
+remote_theme: pmarsceill/just-the-docs
 title: The Orange Robotics Blog
 description: My personal blog, to share the technologies that fascinate me.
 color_scheme: dark
