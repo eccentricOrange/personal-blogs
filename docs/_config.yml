@@ -5,5 +5,4 @@ color_scheme: dark
 
 callouts:
   note-title:
-    title: Note
     color: purple
