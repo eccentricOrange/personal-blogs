@@ -72,12 +72,14 @@ Crucially, whenever you start from a certain image, so does everyone else using 
 *   [_you need to learn Docker RIGHT NOW!! // Docker Containers 101_, YouTube video by NetworkChuck](https://www.youtube.com/watch?v=eGz9DS-aIeY)
 *   [_Docker Crash Course for Absolute Beginners \[NEW\]_, YouTube video by TechWorld with Nana](https://www.youtube.com/watch?v=pg19Z8LL06w)
 
-#### My recommended way to learn Docker
-Follow some of these resources to understand concepts and install the tool. Even play around with it a bit.
-
-But don't spend too much time on it, as there isn't really much you can do with Docker without an appropriate project. Instead, begin to get into using virtual hosts, such as through [GitHub Codespaces](https://www.youtube.com/watch?v=pg19Z8LL06w), where Docker is going to be genuine useful.
-
-Look into using Docker Devcontainers with [VS Code](https://code.visualstudio.com/). Initially, you can rely on the pre-built Dockerfiles and images, and then you can start to build your own as you get more comfortable with it. Read more: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
+{: .tip }
+> **My recommended way to learn Docker**
+> 
+> Follow some of these resources to understand concepts and install the tool. Even play around with it a bit.
+> 
+> But don't spend too much time on it, as there isn't really much you can do with Docker without an appropriate project. Instead, begin to get into using virtual hosts, such as through [GitHub Codespaces](https://www.youtube.com/watch?v=pg19Z8LL06w), where Docker is going to be genuine useful.
+> 
+> Look into using Docker Devcontainers with [VS Code](https://code.visualstudio.com/). Initially, you can rely on the pre-built Dockerfiles and images, and then you can start to build your own as you get more comfortable with it. Read more: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ### Interesting tidbits
 *   [_Top 8 Docker Best Practices for using Docker in Production_, video by TechWorld with Nana](https://www.youtube.com/watch?v=8vXoMqWgbQQ)

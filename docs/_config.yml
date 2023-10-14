@@ -6,5 +6,8 @@ color_scheme: dark
 callouts:
   note-title:
     color: purple
+  tip:
+    color: green
+  
 
 include: [".well-known"]
