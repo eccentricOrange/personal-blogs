@@ -16,7 +16,7 @@ Let's clearly lay out what computers do fundamentally, how this ties in with cod
 
 In general, a file may contain either *data* or *instructions*. A file that contains instructions is called an *executable file*. A file that contains data is called a *data file*. A computer can only run executable files. All other files are just data that can be read by a program, but not executed. Typically, the "instruction files" are *binary files*, and we call them *executables*.
 
-<details>
+<!-- <details> -->
 
 <summary>More details and further resources</summary>
 
@@ -32,4 +32,4 @@ In general, a file may contain either *data* or *instructions*. A file that cont
 *   [_What are Executables? | bin 0x00_ by YouTube channel PWNFunction](https://www.youtube.com/watch?v=WnqOhgI_8wA)
 *   [_What is a File Format?_ by YouTube channel LiveOverflow](https://www.youtube.com/watch?v=VVdmmN0su6E)
 
-</details>
+<!-- </details> -->
