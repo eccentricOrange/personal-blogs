@@ -1,5 +1,5 @@
 remote_theme: pmarsceill/just-the-docs
-theme: just-the-docs
+# theme: just-the-docs
 title: Orange Robotics
 description: My personal blog, to share the technologies that fascinate me.
 color_scheme: dark
