@@ -7,6 +7,8 @@ layout: default
 Over time, I've realized that a few topics commonly mess with beginners, and many resources do not address them adequately. This page my attempt to take a stab at it.
 
 ##  1. Sorting out environments, source code, and executables
+Did you just download an editor, wrote some code, and now you're wondering why it doesn't run? You're not alone.
+
 Among beginners, one of the most common frustrations I've seen has to do with actually setting up your computer to write and run code. Generally speaking, there are three solutions commonly presented to people:
 *   having someone else set up the environment for you
 *   using an online system, where everything is set up for you
@@ -16,9 +18,18 @@ However, in the real world, knowing how and where to run your code seems to be f
 
 Let's clearly lay out what computers do fundamentally, how this ties in with coding, and how you can get a computer to run your code.
 
+{: .tldr }
+> Make sure you install each of the following:
+> *   a text editor/IDE
+> *   the build tools for the language of your choice
+> *   any extensions for your editor/IDE that you need to use the build tools
+
 ### Fact 1: The only type of file a computer can actually run is an executable binary file.
 
 In general, a file may contain either *data* or *instructions*. A file that contains instructions is called an *executable file*. A file that contains data is called a *data file*. A computer can only run executable files. All other files are just data that can be read by a program, but not executed. Typically, the "instruction files" are *binary files*, and we call them *executables*.
+
+{: .important }
+Your computer cannot run your source code without the help of another program, typically called a *compiler* or *interpreter*.
 
 <details markdown="1">
 
@@ -50,11 +61,11 @@ If you take any formal computer science course, you might hear about two ways of
 >
 > <summary>IDE vs text editor</summary>
 > 
-> <p markdown=1> To be completely honest, this is true for **text editors**, but an **IDE (integrated development environment)** is a different story. An IDE is a program that combines a text editor with a compiler/interpreter, and other tools. In this case, the IDE automatically installs the compiler/interpreter and often runs is behind the scenes too. [Read more](https://eccentricorange.github.io/CAIE-Computer-Science/things-to-know.html#using-an-ide)</p>
+> <p markdown=1> To be completely honest, this is true for **text editors**, but an **IDE (integrated development environment)** is a different story. An IDE is a program that combines a text editor with a compiler/interpreter, and other tools. In this case, the IDE automatically installs the compiler/interpreter and often runs is behind the scenes too. [Read more](hhttps://www.javatpoint.com/ide-vs-code-editor)</p>
 >
 > </details>
 
-If we look at a command line interface, we can see this very clearly.
+If we look at a command line interface, we can see this very clearly. We can run our code, and then use the [`ls`](https://www.digitalocean.com/community/tutorials/ls-command-in-linux-unix) command to see the files in our folder.
 
 <details markdown="1">
 <summary>Interpreted example: Python</summary>
@@ -119,4 +130,68 @@ See what happens here. An executable called g++ is run, and it takes two argumen
 $ ./hello
 Hello, world!
 ```
+</details>
+
+### So what does this mean for you?
+If you have understood up till this point, congratulations! These concepts are often fairly confusing, and it's completely okay if you don't understand them yet. You'll get it eventually, once you have some more experience of software development.
+
+That being said, these give us a fundamental understanding which we can build upon to set up a computer for development.
+
+You can, of course, do things differently, but I would recommend the following approach to setting up your computer to learn most languages:
+1.  **Install a text editor/IDE.** I use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor you like. Check out my [older article on editors](https://eccentricorange.github.io/CAIE-Computer-Science/things-to-know.html#using-an-ide) for more details.
+2.  **Install the build tools for the language of your choice.** The term "build tools" or "SDK (software development kit)" are general words for a bunch tools, crucially including the interpreter/compiler that you need to run your code. The steps to do this vary both from one language to another, and from one operating system to another. In general, search for what you need, and follow the instructions. If you're using an IDE, it will often do this for you.
+3.  **[IF RELEVANT] Set up your text editor/IDE to use the build tools.**
+    *   If you use a text editor like VS Code, [vim](https://www.vim.org/), [Notepad++](https://notepad-plus-plus.org/), or any of the hundreds of others, you will need to set it up to use the build tools. Often you do this by installing the relevant extensions in your editor. Look up a tutorial online for configuring this.
+    *   If you installed an IDE like [Visual Studio](https://visualstudio.com/) or one of the [JetBrains IDEs](https://www.jetbrains.com/products/) instead, it will likely have done this for you. If not, look up a tutorial online for configuring it.
+4.  **Make projects in folders, not files.** This is a good habit to get into, and will help you keep your code organized. It will also help you if you ever need to use a build system like [Make](https://www.gnu.org/software/make/) or [source control tools](https://eccentricorange.github.io/CAIE-Computer-Science/things-to-know.html#source-control). I recommend you make a folder for each project, and put all the files for that project in that folder. This includes your source code, any libraries you use, and any build files. This is a good habit to get into, and will help you keep your code organized. Additionally, most IDEs/editors are designed with larger projects in mind, and will work better if you use them this way.
+
+<details markdown="1">
+<summary>Exceptions</summary>
+
+Many systems (especially proprietary ones) have their own way of doing things. For example, [MATLAB](https://www.mathworks.com/products/matlab.html) has its own IDE, and you can't really use it without it. Similarly, [Arduino](https://www.arduino.cc/) has its own IDE (even though it is open-source). Then there are things like [LabVIEW](https://www.ni.com/en-in/shop/labview.html), which aren't traditional text-based languages to begin with. In these cases, you will have to use the IDE, and it will take care of everything for you.
+
+</details>
+
+### Resources
+I'll list out what I consider the best resources for some of the most common languages, but this obviously doesn't cover every use case, so you're generally better off searching for what you need.
+
+<dl>
+
+<dt>Learning Programming</dt>
+
+<dd markdown="1">
+
+*   [r/learnprogramming Wiki](https://www.reddit.com/r/learnprogramming/wiki/): This has curated lists for multiple languages and platforms, and is a great place to start.
+*   [CS50 for CS intro and a little bit C](https://cs50.harvard.edu/)
+*   [CS50P for Python](https://cs50.harvard.edu/python)
+*   [_Beginning C++ Programming - From Beginner to Beyond_ on Udemy by Tim Buchalka](https://www.udemy.com/course/beginning-c-plus-plus-programming/)
+*   [Java from Oracle](https://education.oracle.com/products/ls_40805)
+*   [C# from Microsoft](https://docs.microsoft.com/en-us/learn/paths/csharp-first-steps/)
+*   [Web Development from Mozilla](https://developer.mozilla.org/en-US/docs/Learn)
+
+</dd>
+
+<dt>Tooling</dt>
+
+<dd markdown="1">
+
+*   [_Missing Semester_ by MIT CSAIL](https://missing.csail.mit.edu/)
+*   [_Bash in 100 Seconds_ by YouTube channel Fireship](https://www.youtube.com/watch?v=I4EWvMFj37)
+*   [Setting up languages in VS Code](https://code.visualstudio.com/docs/languages/): The VS Code team has documented the process of setting up the following languages with their editor (at the time of writing):
+
+    C++, C#, CSS, Dart, Dockerfile, F#, Go, HTML, Java, JavaScript, JSON, Julia, Less, Markdown, PHP, PowerShell, Python, R, Ruby, Rust, SCSS, T-SQL, TypeScript
+
+    **Ensure that you follow through with the process they describe, and don't just install the extensions.** This is because the extensions often require the build tools to be installed, and will not work without them.
+
+</dd>
+
+
+</dl>
+
+<details markdown="1">
+
+<summary> No Sponsorships </summary>
+
+I mention products like VS Code fairly frequently. I want to make it clear that I am **not sponsored** by any of these companies, and I do not receive any compensation for mentioning them. I mention them because I use them, and I think they are good products. 
+
 </details>
