@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Tools that I use in my work
 
 I use most of the tools listed below regularly in my work as an electrical engineering student passionate about robotics. I find all of these fascinating, and would like to share that with you. Some of these are really standard tools that you'll find in any engineer's toolbox, while others are more niche. I hope you find something useful here.

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # About this page
 
 {: .note-title }
