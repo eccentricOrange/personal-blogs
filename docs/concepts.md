@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# Concepts
+# Concepts I find cool
 
 These are things I learnt during classes, projects, or workshop, and I find them cool, fascinating, or useful. I hope you do too.
 
