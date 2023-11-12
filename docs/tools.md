@@ -48,7 +48,7 @@ While Git is exceedingly popular, you should know that there are alternatives, s
 Linus Torvalds visits Google to share his thoughts on git, the source control management system he created.
 
 ## 2.   Docker, for isolating your development environment
-[Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other.
+[Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library, operating systems, or other software. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other. In fact, you may not be able to install them together in the first place.
 
 ![Dependency hell, xkcd 1579](https://imgs.xkcd.com/comics/tech_loops.png)
 
