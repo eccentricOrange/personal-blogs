@@ -13,17 +13,12 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://eccentricorange.github.io/concepts.html</loc>
+  <loc>https://eccentricorange.github.io/concepts</loc>
   <lastmod>2023-11-12T10:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://eccentricorange.github.io/misconceptions.html</loc>
-  <lastmod>2023-11-12T10:53:09+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eccentricorange.github.io/tools.html</loc>
+  <loc>https://eccentricorange.github.io/misconceptions</loc>
   <lastmod>2023-11-12T10:53:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
