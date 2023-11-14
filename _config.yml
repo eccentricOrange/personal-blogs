@@ -1,8 +1,11 @@
-remote_theme: pmarsceill/just-the-docs
-# theme: just-the-docs
+# remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 title: Orange Robotics
 description: My personal blog, to share the technologies that fascinate me.
 color_scheme: light
+
+# Make the source folder /docs instead of root
+source: docs
 
 callouts:
   note-title:

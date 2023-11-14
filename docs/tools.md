@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Tools that I use in my work
 ---
 # Tools that I use in my work
 

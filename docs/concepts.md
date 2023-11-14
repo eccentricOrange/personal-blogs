@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Concepts I find cool
 ---
 # Concepts I find cool
 

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: About this page
 ---
 # About this page
 
