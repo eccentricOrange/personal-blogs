@@ -4,6 +4,9 @@ title: Orange Robotics
 description: My personal blog, to share the technologies that fascinate me.
 color_scheme: light
 
+# Make the source folder /docs instead of root
+source: docs
+
 callouts:
   note-title:
     color: purple
