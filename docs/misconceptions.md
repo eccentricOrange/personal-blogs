@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Misconceptions and Exposition
 ---
 
 # Misconceptions and Exposition
