@@ -49,7 +49,7 @@ While Git is exceedingly popular, you should know that there are alternatives, s
 Linus Torvalds visits Google to share his thoughts on git, the source control management system he created.
 
 ## 2.   Docker, for isolating your development environment
-[Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library, operating systems, or other software. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other. In fact, you may not be able to install them together in the first place.
+[Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library, different operating systems, or otherwise different systems. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other. In fact, you may not be able to install them together in the first place.
 
 ![Dependency hell, xkcd 1579](https://imgs.xkcd.com/comics/tech_loops.png)
 
@@ -61,7 +61,19 @@ FROM ubuntu:22.04
 
 There are many more options, such as different OSes, images with certain toolchains built-in, lightweight ones et cetera. You can check out the [Docker Registry](https://hub.docker.com/) for a complete listing.
 
-Crucially, whenever you start from a certain image, so does everyone else using your "Dockerfile". This means that you can be sure that everyone is starting from the same point, and that everyone has the same environment. This is great for reproducibility, and for making sure that your code works on other people's computers.
+Crucially, whenever you start from a certain environment (image), so does everyone else using your "Dockerfile". This means that you can be sure that everyone is starting from the same point, and that everyone has the same environment. This is great for reproducibility, and for making sure that your code works on other people's computers.
+
+<details markdown="1">
+
+<summary>Docker vs Virtual Machines</summary>
+
+On the surface, Docker containers behave like virtual machines. But Docker containers share the same kernel as the host system, which means that they are more lightweight than virtual machines.
+
+Read more:
+*   [From official Docker documentation](https://www.docker.com/resources/what-container)
+*   [_How is Docker different from a virtual machine?_ on Stack Overflow](https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-virtual-machine)
+
+</details>
 
 ### Resources to understand what Docker is
 *   [Official Docker documentation](https://docs.docker.com/get-started/overview/)
