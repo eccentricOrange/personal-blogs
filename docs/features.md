@@ -32,6 +32,8 @@ True
 False
 ```
 
+See the [Python documentation](https://docs.python.org/3/library/functions.html) for more built-in functions.
+
 ## 2. Python Docstring
 These are strings used for documenting a Python module, class, function or method in a consistent format. They are used to generate online or offline documentation, and editors like VS Code will automatically pick up on them (and Markdown formatting!) to give tooltips. [See `docstring` convention](https://www.python.org/dev/peps/pep-0257/)
 
@@ -89,7 +91,7 @@ While I have been using micro-controllers for a few years at thing point, I only
 
 This allows for some really cool behavior, such as storing settings right on the board.
 
-# 7. Named groups in Python regex
+# 4. Named groups in Python regex
 For the uninitiated, using regex (regular expressions) is a way of matching patterns in strings. Here are some examples:
 
 ```python
