@@ -62,7 +62,7 @@ If you take any formal computer science course, you might hear about two ways of
 >
 > <summary>IDE vs text editor</summary>
 > 
-> <p markdown=1> To be completely honest, this is true for **text editors**, but an **IDE (integrated development environment)** is a different story. An IDE is a program that combines a text editor with a compiler/interpreter, and other tools. In this case, the IDE automatically installs the compiler/interpreter and often runs is behind the scenes too. [Read more](https://www.javatpoint.com/ide-vs-code-editor)</p>
+> <p markdown=1> To be completely honest, this is true for **text editors**, but an **IDE (integrated development environment)** is a different story. An IDE is a program that combines a text editor with a compiler/interpreter, and other tools. In this case, the IDE automatically installs the compiler/interpreter and often runs is behind the scenes too. That said, the distinction between text editors and IDEs is often blurred for modern software. [Read more](https://www.javatpoint.com/ide-vs-code-editor)</p>
 >
 > </details>
 
