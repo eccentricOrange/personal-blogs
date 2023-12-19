@@ -4,7 +4,7 @@ title: Random features and tips
 ---
 # Random features and tips
 
-## 1. `any` and `all` keywords in Python
+## 1. The `any` and `all` keywords in Python
 
 `any` behaves like the mathematical `OR` operator. It takes an iterable and returns `True` if at least one of the elements in the iterable is truthy. [See `any` documentation](https://docs.python.org/library/functions.html#any)`
 
