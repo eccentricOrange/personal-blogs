@@ -115,7 +115,7 @@ However, Python has a feature called named groups. This allows you to name a gro
 import re
 
 ## An email regex with named groups
-email_regex = r"^(?P<username>[a-zA-Z0-9_.+-]+)@(?P<domain>[a-zA-Z0-9-])\.(?P<tld>[a-zA-Z0-9-.]+)$"
+email_regex = r"^(?P<username>[a-zA-Z0-9_.+-]+)@(?P<domain>[a-zA-Z0-9-]+)\.(?P<tld>[a-zA-Z0-9-.]+)$"
 
 # test
 match = re.match(email_regex, "someone@example.com")
