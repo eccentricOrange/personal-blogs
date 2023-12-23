@@ -35,7 +35,13 @@ False
 See the [Python documentation](https://docs.python.org/3/library/functions.html) for more built-in functions.
 
 ## 2. Python Docstring
-These are strings used for documenting a Python module, class, function or method in a consistent format. They are used to generate online or offline documentation, and editors like VS Code will automatically pick up on them (and Markdown formatting!) to give tooltips. [See `docstring` convention](https://www.python.org/dev/peps/pep-0257/)
+These are strings used for documenting a Python module, class, function or method in a consistent format. They are used to generate online or offline documentation, and editors like VS Code will automatically pick up on them (and Markdown formatting!) to give tooltips. [See `docstring` convention](https://www.python.org/dev/peps/pep-0257/).
+
+It may also interest you to look into these:
+1.  **Doxygen:** A tool for generating documentation from source code. [See `Doxygen` documentation](https://www.doxygen.nl/).
+2.  **Guide to documenting Python code:** A look at the technical aspects of writing documentation for Python code, by Real Python. [Link to article](https://realpython.com/documenting-python-code/)
+3.  **Write The Docs:** A community/wiki with information on writing *good* documentation. [Link to website](https://www.writethedocs.org/).
+
 
 Here's an example from a project I'm working on:
 
