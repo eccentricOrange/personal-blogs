@@ -18,6 +18,9 @@ callouts:
   important:
     color: blue
     title: Important
+  warning:
+    color: red
+    title: Warning
   
 
 include: [".well-known"]
