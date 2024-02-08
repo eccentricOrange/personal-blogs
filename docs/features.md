@@ -137,13 +137,28 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 > * GitHub, GitLab, and Bitbucket are online services that host Git repositories
 > * These services provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox
 
+{: .warning }
+This article doesn't give you resources to actually use Git, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is only an explanation that specifically addresses the confusion I've seen in beginners.
+
 ### Suggested mental model
-If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
+1.  Concept of version control
 
-![History pane in Google Docs](https://images.ctfassets.net/lzny33ho1g45/5pSv8w3VLxGxTJ58g6NZ6N/c15dfe6ae8b465bbb1b9172853ea3ff3/google-docs-revision-historyimage4.png)
+    If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
 
-Source: Zapier
+    ![History pane in Google Docs](https://images.ctfassets.net/lzny33ho1g45/5pSv8w3VLxGxTJ58g6NZ6N/c15dfe6ae8b465bbb1b9172853ea3ff3/google-docs-revision-historyimage4.png)
 
-When you make a change, the software records the change, who made it, and when. In the case of the Google Workspace suite, all of this is neatly packaged in a single file (the document). You're free to view this history, and even revert to an older version if you want.
+    Source: Zapier
 
-However, software (source code) files are a little different. Firstly, they're very simple 
+    When you make a change, the software records the change, who made it, and when. In the case of the Google Workspace suite, all of this is neatly packaged in a single file (the document). You're free to view this history, and even revert to an older version if you want.
+
+2.  Version Control Systems and Git
+
+    However, software (source code) files are a little different. Firstly, they're very simple [text files](/misconceptions#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
+
+    So, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
+
+    ![.git folder in workspace](assets/3-git-folder.png)
+
+    If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
+
+    The rest of the root folder contains the actual files of the project, and is called the "working directory". You make changes here, and then "commit" them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can "checkout" a different "branch" or "commit". Git then updates the working directory to match the version you selected.
