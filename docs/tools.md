@@ -11,7 +11,7 @@ Note that nothing here is sponsored, and I am not affiliated with any of the com
 ## 1.   Git for source control
 
 {: .warning }
-> This article is just an introduction, followed by a comprehensive list of resources to learn Git. For an explanation of the common misconceptions surrounding Git, see the (other article)[/2---what-do-you-actually-do-with-git].
+> This article is just an introduction, followed by a comprehensive list of resources to learn Git. For an explanation of the common misconceptions surrounding Git, see the [other article](/2---what-do-you-actually-do-with-git).
 
 
 How often have you had to deal with this?
