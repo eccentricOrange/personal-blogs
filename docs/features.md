@@ -141,7 +141,7 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 This article doesn't give you resources to actually use Git, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is only an explanation that specifically addresses the confusion I've seen in beginners.
 
 ### Suggested mental model
-1.  Concept of version control
+1.  **Concept of tracking history**
 
     If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
 
@@ -151,7 +151,9 @@ This article doesn't give you resources to actually use Git, as I've discussed t
 
     When you make a change, the software records the change, who made it, and when. In the case of the Google Workspace suite, all of this is neatly packaged in a single file (the document). You're free to view this history, and even revert to an older version if you want.
 
-2.  Version Control Systems and Git
+    Read more: https://support.google.com/docs/answer/190843
+
+2.  **Version Control Systems and Git**
 
     However, software (source code) files are a little different. Firstly, they're very simple [text files](/misconceptions#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
 
@@ -162,3 +164,29 @@ This article doesn't give you resources to actually use Git, as I've discussed t
     If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
 
     The rest of the root folder contains the actual files of the project, and is called the "working directory". You make changes here, and then "commit" them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can "checkout" a different "branch" or "commit". Git then updates the working directory to match the version you selected.
+
+    ![Working directory and history](https://git-scm.com/book/en/v2/images/areas.png)
+
+    Source: Git documentation
+
+3.  **Online services**
+    
+    GitHub, GitLab, and Bitbucket are online services that host Git repositories. They provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. They also provide a way to view the history of a project, and to collaborate with others. They do this by providing a web interface to the Git repository, and by providing a way to "clone" the repository to your local machine.
+
+    The web interface analyses the contents of the `.git` folder (optionally, alongside other data), and visualises many aspects of the project. For example, you can see the history of the project, the different branches, and the changes made in each commit. You can also view the contents of the working directory at any point in the history.
+
+    ![Home page of this blog](assets/4-git-network.png)
+
+    !["Network," history of the repository](assets/5-git-network.png)
+
+    ![Commit history](assets/6-git-commits.png)
+
+    Source: GitHub (this blog's repository)
+
+    When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and "push" them back to the online repository. You can also "pull" changes from the online repository to your local machine.
+
+    ![Git flow](https://i.imgur.com/oodiCnB.pngg)
+
+    Source: [Reddit](https://www.reddit.com/r/git/comments/99ul9f/git_workflow_diagram_showcasing_the_role_of/)
+
+    
