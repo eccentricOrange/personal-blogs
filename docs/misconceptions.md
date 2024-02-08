@@ -214,7 +214,7 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 
     When you make a change, the software records the change, who made it, and when. In the case of the Google Workspace suite, all of this is neatly packaged in a single file (the document). You're free to view this history, and even revert to an older version if you want.
 
-    Read more: https://support.google.com/docs/answer/190843
+    Read more from [Google's support page](https://support.google.com/docs/answer/190843).
 
 2.  **Version Control Systems and Git**
 
@@ -254,9 +254,9 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 
 
     Most of these services also provide tons of services aside from hosting code and collaborating. Check those out on their respective websites:
-    *   https://github.com/features
-    *   https://about.gitlab.com/
-    *   https://bitbucket.org/product
+    *   [GitHub](https://github.com/features)
+    *   [GitLab](https://about.gitlab.com/)
+    *   [BitBucket](https://bitbucket.org/product)
 
 4.  **Integration with your IDE/editor**
     
@@ -270,7 +270,7 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 
     This is a very high-level overview, and there are many more details to learn about Git. However, I hope this gives you a good starting point for understanding how Git fits into the world of software development.
 
-    Learn more: https://code.visualstudio.com/docs/sourcecontrol/intro-to-git
+    Learn more from [VS Code Docs](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
 
 <details markdown="1">
 
