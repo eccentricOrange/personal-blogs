@@ -128,3 +128,22 @@ print(match.group("username"))
 print(match.group("domain"))
 print(match.group("tld"))
 ```
+
+## 5.   What do you actually do with Git?
+Many programmers have heard of [Git](https://git-scm.com/), and the corresponding online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
+
+{: .tldr }
+> * Git is just a tool (an app, if you will) that tracks changes to a project (called a repository) over time
+> * GitHub, GitLab, and Bitbucket are online services that host Git repositories
+> * These services provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox
+
+### Suggested mental model
+If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
+
+![History pane in Google Docs](https://images.ctfassets.net/lzny33ho1g45/5pSv8w3VLxGxTJ58g6NZ6N/c15dfe6ae8b465bbb1b9172853ea3ff3/google-docs-revision-historyimage4.png)
+
+Source: Zapier
+
+When you make a change, the software records the change, who made it, and when. In the case of the Google Workspace suite, all of this is neatly packaged in a single file (the document). You're free to view this history, and even revert to an older version if you want.
+
+However, software (source code) files are a little different. Firstly, they're very simple 

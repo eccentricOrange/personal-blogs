@@ -34,7 +34,7 @@ Your computer cannot run your source code without the help of another program, t
 
 <details markdown="1">
 
-<summary>More details and further resources</summary>
+#### <summary>More details and further resources</summary>
 
 <dl>
 
@@ -186,8 +186,8 @@ I'll list out what I consider the best resources for some of the most common lan
 
 </dd>
 
-
 </dl>
+
 
 <details markdown="1">
 
@@ -196,11 +196,3 @@ I'll list out what I consider the best resources for some of the most common lan
 I mention products like VS Code fairly frequently. I want to make it clear that I am **not sponsored** by any of these companies, and I do not receive any compensation for mentioning them. I mention them because I use them, and I think they are good products. 
 
 </details>
-
-# 2.   What do you actually do with Git?
-Many programmers have heard of [Git](https://git-scm.com/), and the corresponding online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
-
-{: .tldr }
-> * Git is just a tool (an app, if you will) that tracks changes to a project (called a repository) over time
-> * GitHub, GitLab, and Bitbucket are online services that host Git repositories
-> * These services provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox
