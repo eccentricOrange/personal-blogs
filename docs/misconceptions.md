@@ -193,7 +193,7 @@ I'll list out what I consider the best resources for some of the most common lan
 ## 2.   What do you actually do with Git?
 
 {: .warning }
-> This article doesn't give you resources to actually use Git, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is only an explanation that specifically addresses the confusion I've seen in beginners.
+> This article doesn't give you resources to actually learn Git hands-on, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is a more theoretical explanation that specifically addresses the confusion I've seen in beginners.
 
 Many programmers have heard of [Git](https://git-scm.com/), and the corresponding online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
 
