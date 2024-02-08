@@ -191,6 +191,7 @@ I'll list out what I consider the best resources for some of the most common lan
 </dl>
 
 ## 2.   What do you actually do with Git?
+
 {: .warning }
 > This article doesn't give you resources to actually use Git, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is only an explanation that specifically addresses the confusion I've seen in beginners.
 
@@ -237,11 +238,11 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 
     The web interface analyses the contents of the `.git` folder (optionally, alongside other data), and visualizes many aspects of the project. For example, you can see the history of the project, the different branches, and the changes made in each commit. You can also view the contents of the working directory at any point in the history.
 
-    ![Home page of this blog](assets/4-git-network.png)
+    ![Home page of this blog](assets/6-gh-home.png)
 
-    !["Network," history of the repository](assets/5-git-network.png)
+    !["Network," history of the repository](assets/4-git-network.png)
 
-    ![Commit history](assets/6-git-commits.png)
+    ![Commit history](assets/5-git-commits.png)
 
     Source: GitHub (this blog's repository)
 
