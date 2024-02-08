@@ -258,7 +258,7 @@ The web interface analyses the contents of the `.git` folder (optionally, alongs
 
 Source: GitHub (this blog's repository)
 
-When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and "push" them back to the online repository. You can also "pull" changes from the online repository to your local machine.
+When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and "push" them back to the online repository. You can also "pull" changes from the online repository to your local machine. Look into [workflows](#resources-for-standard-practices-and-workflows) to learn more.
 
 ![Git flow](https://i.imgur.com/oodiCnB.pngg)
 
@@ -312,7 +312,6 @@ There are a few practices that are generally considered good when using Git, and
 *   [_Best Practices for Using Git_, FCC](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=software%20development%20projects.-,Best%20Practices%20for%20Using%20Git,-To%20get%20the)
 *   [_Comparing Git workflows_, Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)
 *   [_GitHub flow_, GitHub](https://docs.github.com/en/get-started/using-github/github-flow)
-
 
 ### Resources to understand what Git is
 Just pick any of these and read/watch it, these are just an overview.
