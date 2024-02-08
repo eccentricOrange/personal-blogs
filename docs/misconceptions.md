@@ -193,14 +193,15 @@ I'll list out what I consider the best resources for some of the most common lan
 ## 2.   What do you actually do with Git?
 
 {: .warning }
-> This article doesn't give you resources to actually learn Git hands-on, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is a more theoretical explanation that specifically addresses the confusion I've seen in beginners.
+> This article doesn't give you resources to actually learn Git hands-on, as I've discussed that on the [Tools page](tools#1---git-for-source-control). This is a more theoretical explanation that addresses the confusion I've seen in beginners.
 
-Many programmers have heard of [Git](https://git-scm.com/), and the corresponding online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
+Many programmers have heard of [Git](https://git-scm.com/), and the related online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
 
 {: .tldr }
 > * Git is just a tool (**an app,** if you will) that tracks changes to a project (called a repository) over time
 > * GitHub, GitLab, and Bitbucket are online services that **host Git repositories**
-> * These services provide a way to **share your code** with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox
+> * The `.git` folder makes a project folder a Git repository, and contains all the history and metadata needed for the Git tool to work
+> * These services provide a way to **share your code** with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. These services use and "understand" the `.git` folder to provide a web interface to the Git repository
 
 
 ### Suggested mental model
@@ -220,11 +221,11 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
 
     However, software (source code) files are a little different. Firstly, they're very simple [text files](/misconceptions#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
 
-    So, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
+    So, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project \[[source](https://www.youtube.com/watch?v=idLyobOhtO4)\]. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
 
     ![.git folder in workspace](assets/3-git-folder.png)
 
-    If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
+    If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata (among other things) needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
 
     The rest of the root folder contains the actual files of the project, and is called the "working directory". You make changes here, and then "commit" them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can "checkout" a different "branch" or "commit". Git then updates the working directory to match the version you selected.
 
@@ -276,29 +277,31 @@ Many programmers have heard of [Git](https://git-scm.com/), and the correspondin
     
     If you want to learn how to use Git, I recommend you check out the resources I've listed on the [Tools page](tools#1---git-for-source-control).
 
-    Additionally, there are a few practices that are generally considered good when using Git, and will help you avoid trouble, especially as a beginner. These are **not hard rules**, and experienced developers will often rightly break them, but they are a good starting point:
+    Additionally, there are a few practices that are generally considered good when using Git, and will help you avoid trouble, especially as a beginner (they at least help me). These are **not hard rules**, and experienced developers will often rightly break them, but they are a good starting point:
 
-    *   **Make small, frequent commits.**
+    *   **Make small, frequent commits**
     
         This makes it easier to understand the history of the project, and to revert changes if something goes wrong.
 
-    *   **Use branches.**
+    *   **Use branches**
     
         Branches are one of the core features of Git and let you maintain various "draft" versions of a project, alongside a "main" version. This allows you to work on different features of the project at the same time, and to experiment without breaking the main version of the project.
 
-    *   **Use one repository per project.**
+        The expectation is that you will eventually "merge" these branches with the main version of the project (as opposed to permanently using different branches for unrelated code).
+
+    *   **Use one repository per project**
     
         This has more to do with IDEs and other tools than Git, but they all go hand-in-hand. Uploading several projects in the same repository can make it difficult for developer tools to index your files to understand your projects. Of course, there are ways to work around this, but it's generally easier to just use one repository per project.
     
         It also makes it easier to use the project with build systems like [Make](https://www.gnu.org/software/make/), and with other tools like [Docker](https://www.docker.com/).
 
-    *   **Use a `.gitignore` file.**
+    *   **Use a `.gitignore` file**
         
-        This is a file that tells Git to ignore certain files and folders. This is useful for files that are generated by your build tools, or for files that contain sensitive information (like passwords and dependencies). It's also useful for files that are specific to your computer, and not relevant to the project (like `.DS_Store` files on macOS).
+        This is a file that tells Git to ignore certain files and folders. This is useful for files that are generated by your build tools (such as `node_modules` or `__pycache__`), or for files that contain sensitive information (like passwords and dependencies). It's also useful for files that are specific to your computer, and not relevant to the project (like `.DS_Store` files on macOS).
 
     *   **Pay attention to the remote URL in Git**
 
-        This is the URL of the online repository. It's important to set this correctly, as it's the URL that Git will use to push and pull changes. If you set it incorrectly, you won't be able to push and pull changes. But you can also leverage this to use multiple online hosting services, or to use a different URL for different purposes.
+        This is the URL of the online repository. It's important to set this correctly, as it's the URL that Git will use to push and pull changes. But you can also leverage this to use multiple online hosting services, or to use a different URL for different purposes (I use this to handle two remotes, with one serving as a back-up).
 
 <details markdown="1">
 
