@@ -9,6 +9,11 @@ I use most of the tools listed below regularly in my work as an electrical engin
 Note that nothing here is sponsored, and I am not affiliated with any of the companies that make these tools. I just like them.
 
 ## 1.   Git for source control
+
+{: .warning }
+This article is just an introduction, followed by a comprehensive list of resources to learn Git. For an explanation of the common misconceptions surrounding Git, see the other article [/misconceptions#2].
+
+
 How often have you had to deal with this?
 
 ![Badly named Word documents](assets/1-bad-naming.png)
