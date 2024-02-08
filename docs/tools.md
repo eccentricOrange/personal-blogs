@@ -7,6 +7,8 @@ title: Developer tooling
 
 While I primarily work on robotics and embedded systems, I regularly use many software tools in my work. I find all of these fascinating, and would like to share that with you, and I hope you find something useful here. The content is specifically structured to target beginners and common issues not addressed in most tutorials.
 
+In most cases I provide multiple resources for each tool/concept, so you can pick the one that suits you best (or pick the first if you cannot decide). **You do not have to go through all of them**.
+
 Note that nothing here is sponsored, and I am **not affiliated** with any of the companies that make these tools. I just like their products.
 
 ## 1.   Sorting out environments, source code, and executables
@@ -17,7 +19,7 @@ Among beginners, one of the most common frustrations I've seen has to do with ac
 *   using an online system, where everything is set up for you
 *   using an IDE (Integrated Development Environment), where everything is set up for you in one consolidated program.
 
-However, in the real world, knowing how and where to run your code seems to be fairly important. It may not be on a personal computer at all. Often it's a server where the only available interface is a command line. Another common one is inside another file (such as a [Dockerfile](/tools#2---docker-for-isolating-your-development-environment), or another configuration file). Personally, I've often had to run on embedded targets like [Raspberry Pi](https://www.raspberrypi.org/), or [Arduino](https://www.arduino.cc/) boards. In these cases, you need to know how to set up your environment, and how to run your code.
+However, in the real world, knowing how and where to run your code seems to be fairly important. It may not be on a personal computer at all. Often it's a server where the only available interface is a command line. Another common one is inside another file (such as a [Dockerfile](#3---docker-for-isolating-your-development-environment), or another configuration file). Personally, I've often had to run on embedded targets like [Raspberry Pi](https://www.raspberrypi.org/), or [Arduino](https://www.arduino.cc/) boards. In these cases, you need to know how to set up your environment, and how to run your code.
 
 Let's clearly lay out what computers do fundamentally, how this ties in with coding, and how you can get a computer to run your code.
 
@@ -197,10 +199,10 @@ I'll list out what I consider the best resources for some of the most common lan
 Many programmers have heard of [Git](https://git-scm.com/), and the related online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
 
 {: .tldr }
-> * Git is just a tool (**an app,** if you will) that tracks changes to a project (called a repository) over time
+> * Git is just a tool (an **app**, if you will) that tracks changes to a project
 > * GitHub, GitLab, and Bitbucket are online services that **host Git repositories**
-> * The `.git` folder makes a project folder a Git repository, and contains all the history and metadata needed for the Git tool to work
-> * These services provide a way to **share your code** with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. These services use and "understand" the `.git` folder to provide a web interface to the Git repository
+> * The `.git` folder makes a project folder a **Git repository**, and contains all the history and metadata needed for the Git tool to work
+> * These services provide a way to **share your code** with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. They "understand" the `.git` folder to provide a web interface to the Git repository
 
 ### Where does the need for Git come from?
 How often have you had to deal with this?
@@ -213,6 +215,9 @@ Any of you that have used [Google Docs](https://docs.google.com/) or similar onl
 
 Enter [Git](https://git-scm.com/). Git is a source control system that allows you to keep track of all the changes you make to a file, and revert to any version you want. It's also great for collaborating with others, as it allows you to merge changes made by multiple people to the same file. It's by far the most popular [version control system (VCS)](https://about.gitlab.com/topics/version-control/) out there today.
 
+{: .warning }
+> The rest of this explanation is fairly theoretical. If this is the first time you're trying Git, I would recommend you to use the [standard resources I've listed below](#resources-to-understand-what-git-is) to get some hands-on experience, and then come back to this section if you find yourself struggling with something. These resources are tried and tested, and will will get you up and running.
+
 ### Conventional history tracking tools
 If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
 
@@ -224,9 +229,8 @@ When you make a change, the software records the change, who made it, and when. 
 
 Read more from [Google's support page](https://support.google.com/docs/answer/190843).
 
-### Version control systems and Git
-
-However, software (source code) files are a little different. Firstly, they're very simple [text files](/misconceptions#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
+### History tracking in source code with Git
+However, software (source code) files are a little different. Firstly, they're very simple [text files](#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
 
 So, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project \[[source](https://www.youtube.com/watch?v=idLyobOhtO4)\]. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
 
@@ -280,15 +284,12 @@ This is a very high-level overview, and there are many more details to learn abo
 
 Learn more from [VS Code Docs](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
 
-### Conclusion
-    
-If you want to learn how to use Git, I recommend you check out the resources below.
-
-Additionally, there are a few practices that are generally considered good when using Git, and will help you avoid trouble, especially as a beginner (they at least help me). These are **not hard rules**, and experienced developers will often rightly break them, but they are a good starting point:
+### Best practices
+There are a few practices that are generally considered good when using Git, and will help you avoid trouble, especially as a beginner (they at least help me). These are **not hard rules**, and experienced developers will often rightly break them, but they are a good starting point:
 
 *   **Make small, frequent commits**
 
-    This makes it easier to understand the history of the project, and to revert changes if something goes wrong.
+    This makes it easier to understand what's going on, and to revert *specific* changes if something goes wrong.
 
 *   **Use branches**
 
@@ -300,7 +301,7 @@ Additionally, there are a few practices that are generally considered good when 
 
     This has more to do with IDEs and other tools than Git, but they all go hand-in-hand. Uploading several projects in the same repository can make it difficult for developer tools to index your files to understand your projects. Of course, there are ways to work around this, but it's generally easier to just use one repository per project.
 
-    It also makes it easier to use the project with build systems like [Make](https://www.gnu.org/software/make/), and with other tools like [Docker](https://www.docker.com/).
+    It also makes it easier to use the project with build systems like [Make](https://www.gnu.org/software/make/), and with other tools like [Docker](#3---docker-for-isolating-your-development-environment).
 
 *   **Use a `.gitignore` file**
     
@@ -311,19 +312,21 @@ Additionally, there are a few practices that are generally considered good when 
     This is the URL of the online repository. It's important to set this correctly, as it's the URL that Git will use to push and pull changes. But you can also leverage this to use multiple online hosting services, or to use a different URL for different purposes (I use this to handle two remotes, with one serving as a back-up).
 
 ### Resources to understand what Git is
-Just pick one of these and read/watch it, these are just an overview.
+Just pick any of these and read/watch it, these are just an overview.
 *   [Atlassian article on version control](https://www.atlassian.com/git/tutorials/what-is-version-control)
 *   [Wikipedia article on version control](https://en.wikipedia.org/wiki/Version_control)
 *   [Atlassian article on Git](https://www.atlassian.com/git/tutorials/what-is-git)
 *   [_Git Explained in 100 Seconds_, YouTube video by Fireship](https://www.youtube.com/watch?v=hwP7WQkmECE)
 
 ### Resources to learn how to use Git
+Pick whatever you're most comfortable with.
 *   [_Git & GitHub Tutorial for Beginners_, YouTube playlist by Net Ninja](https://youtube.com/playlist?list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR) (this is what I used when I learnt Git)
 *   [_Getting started with Git and GitHub_, article by GitHub](https://docs.github.com/en/github/getting-started-with-github)
 *   [_Git It? How to use Git and Github_ by Fireship on YT](https://www.youtube.com/watch?v=HkdAHXoRtos)
 *   [Official Git documentation](https://git-scm.com/docs/gittutorial)
 
 ### Important concepts you should look into
+Perhaps not initially, but try to get through all these concepts to using Git effectively.
 *   [GitHub](https://github.com/)/[GitLab](https://about.gitlab.com/) or other Git hosting services
 *   Git branching
     *   [Official Git documentation on branching](https://git-scm.com/book/en/Git-Branching-Branches-in-a-Nutshell)
@@ -343,6 +346,8 @@ Linus Torvalds visits Google to share his thoughts on git, the source control ma
 [Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library, different operating systems, or otherwise different systems. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other. In fact, you may not be able to install them together in the first place.
 
 ![Dependency hell, xkcd 1579](https://imgs.xkcd.com/comics/tech_loops.png)
+
+Source: [xkcd 1579](https://xkcd.com/1579/)
 
 Docker is a tool that allows you to isolate your development environment from the rest of your computer. You start from a bare environment; for example, an installation of a Ubuntu system:
 
@@ -367,12 +372,14 @@ Read more:
 </details>
 
 ### Resources to understand what Docker is
+Pick any of these and read/watch it, these are just an overview.
 *   [Official Docker documentation](https://docs.docker.com/get-started/overview/)
 *   [Wikipedia article on Docker](https://en.wikipedia.org/wiki/Docker_(software))
 *   [_Docker Explained in 100 Seconds_, YouTube video by Fireship](https://www.youtube.com/watch?v=Gjnup-PuquQ)
 *   [IBM article on Docker](https://www.ibm.com/topics/docker)
 
 ### Resources to learn how to use Docker
+Pick whatever you're most comfortable with.
 *   [Official Docker documentation](https://docs.docker.com/get-started/)
 *   [_Containerize your application_, article by Docker](https://docs.docker.com/get-started/02_our_app/)
 *   [_Docker Tutorial for Beginners_, YouTube playlist by Net Ninja](https://youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d)
@@ -389,7 +396,8 @@ Read more:
 > Look into using Docker Devcontainers with [VS Code](https://code.visualstudio.com/). Initially, you can rely on the pre-built Dockerfiles and images, and then you can start to build your own as you get more comfortable with it. Read more: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ### Interesting tidbits
+It will likely be a while before any of these are useful (or practical to even play around with) for most people, especially when getting started. But they all are commonplace in the industry, and interesting in their own right. 
 *   [_Top 8 Docker Best Practices for using Docker in Production_, video by TechWorld with Nana](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
-*   [Docker Composer](https://docs.docker.com/compose/), for managing multiple containers simultaneously
+*   [Docker Compose](https://docs.docker.com/compose/), for managing multiple containers simultaneously
 *   [Docker Swarm](https://docs.docker.com/engine/swarm/), for managing multiple containers across multiple hosts
 *   [Kubernetes](https://kubernetes.io/), for managing multiple containers across multiple hosts, with more features than Docker Swarm
