@@ -307,12 +307,6 @@ There are a few practices that are generally considered good when using Git, and
 
     This is the URL of the online repository. It's important to set this correctly, as it's the URL that Git will use to push and pull changes. But you can also leverage this to use multiple online hosting services, or to use a different URL for different purposes (I use this to handle two remotes, with one serving as a back-up).
 
-### Resources for standard practices and workflows
-*   [_What are Git version control best practices?_, GitLab](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
-*   [_Best Practices for Using Git_, FCC](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=software%20development%20projects.-,Best%20Practices%20for%20Using%20Git,-To%20get%20the)
-*   [_Comparing Git workflows_, Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)
-*   [_GitHub flow_, GitHub](https://docs.github.com/en/get-started/using-github/github-flow)
-
 ### Resources to understand what Git is
 Just pick any of these and read/watch it, these are just an overview.
 *   [Atlassian article on version control](https://www.atlassian.com/git/tutorials/what-is-version-control)
@@ -337,6 +331,13 @@ Perhaps not initially, but try to get through all these concepts to using Git ef
 *   [Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) and [pull requests](https://www.youtube.com/watch?v=HkdAHXoRtos)
 *   [The `.gitignore` file](https://git-scm.com/docs/gitignore)
 *   [Resolving merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
+
+### Resources for standard practices and workflows
+These likely aren't going to be useful initially, but they're good to know about. Many of these can help save hours of headaches or deal with lost content.
+*   [_What are Git version control best practices?_, GitLab](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
+*   [_Best Practices for Using Git_, FCC](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=software%20development%20projects.-,Best%20Practices%20for%20Using%20Git,-To%20get%20the)
+*   [_Comparing Git workflows_, Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)
+*   [_GitHub flow_, GitHub](https://docs.github.com/en/get-started/using-github/github-flow)
 
 While Git is exceedingly popular, you should know that there are alternatives, such as SVN and Mercurial.
 
