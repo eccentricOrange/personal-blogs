@@ -34,7 +34,9 @@ Your computer cannot run your source code without the help of another program, t
 
 <details markdown="1">
 
-<summary><h4>More details and further resources</h4></summary>
+<summary>More details and further resources</summary>
+
+#### Deeper dive into types of files
 
 <dl>
 
