@@ -34,7 +34,7 @@ Your computer cannot run your source code without the help of another program, t
 
 <details markdown="1">
 
-#### <summary>More details and further resources</summary>
+<h4><summary>More details and further resources</summary></h4>
 
 <dl>
 
