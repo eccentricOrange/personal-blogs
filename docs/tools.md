@@ -216,7 +216,7 @@ Any of you that have used [Google Docs](https://docs.google.com/) or similar onl
 Enter [Git](https://git-scm.com/). Git is a source control system that allows you to keep track of all the changes you make to a file, and revert to any version you want. It's also great for collaborating with others, as it allows you to merge changes made by multiple people to the same file. It's by far the most popular [version control system (VCS)](https://about.gitlab.com/topics/version-control/) out there today.
 
 {: .warning }
-> The rest of this explanation is fairly theoretical. If this is the first time you're trying Git, I would recommend you to use the [standard resources I've listed below](#resources-to-understand-what-git-is) to get some hands-on experience, and then come back to this section if you find yourself struggling with something. These resources are tried and tested, and will will get you up and running.
+> The rest of this explanation is fairly theoretical. If this is the first time you're trying Git, I would recommend you to use the [standard resources I've listed below](#resources-to-understand-what-git-is) to **get some hands-on experience**, and then come back to this section if you find yourself struggling with something. These resources are tried and tested, and will will get you up and running.
 
 ### Conventional history tracking tools
 If you've ever used tools like Google Docs, you're already familiar with the basic idea of tracking changes. 
@@ -232,7 +232,7 @@ Read more from [Google's support page](https://support.google.com/docs/answer/19
 ### History tracking in source code with Git
 However, software (source code) files are a little different. Firstly, they're very simple [text files](#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
 
-So, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project \[[source](https://www.youtube.com/watch?v=idLyobOhtO4)\]. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
+Therefore, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project \[[source](https://www.youtube.com/watch?v=idLyobOhtO4)\]. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
 
 ![.git folder in workspace](assets/3-git-folder.png)
 
@@ -278,11 +278,7 @@ Generally speaking, these provide a GUI (much like one of the hosting service we
 
 ![VS Code Git integration](https://code.visualstudio.com/assets/docs/sourcecontrol/overview/overview.png)
 
-Source: VS Code documentation
-
-This is a very high-level overview, and there are many more details to learn about Git. However, I hope this gives you a good starting point for understanding how Git fits into the world of software development.
-
-Learn more from [VS Code Docs](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git).
+Source: [VS Code documentation](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
 
 ### Best practices
 There are a few practices that are generally considered good when using Git, and will help you avoid trouble, especially as a beginner (they at least help me). These are **not hard rules**, and experienced developers will often rightly break them, but they are a good starting point:
@@ -311,6 +307,13 @@ There are a few practices that are generally considered good when using Git, and
 
     This is the URL of the online repository. It's important to set this correctly, as it's the URL that Git will use to push and pull changes. But you can also leverage this to use multiple online hosting services, or to use a different URL for different purposes (I use this to handle two remotes, with one serving as a back-up).
 
+### Resources for standard practices and workflows
+*   [_What are Git version control best practices?_, GitLab](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
+*   [_Best Practices for Using Git_, FCC](https://www.freecodecamp.org/news/how-to-use-git-best-practices-for-beginners/#:~:text=software%20development%20projects.-,Best%20Practices%20for%20Using%20Git,-To%20get%20the)
+*   [_Comparing Git workflows_, Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)
+*   [_GitHub flow_, GitHub](https://docs.github.com/en/get-started/using-github/github-flow)
+
+
 ### Resources to understand what Git is
 Just pick any of these and read/watch it, these are just an overview.
 *   [Atlassian article on version control](https://www.atlassian.com/git/tutorials/what-is-version-control)
@@ -324,6 +327,7 @@ Pick whatever you're most comfortable with.
 *   [_Getting started with Git and GitHub_, article by GitHub](https://docs.github.com/en/github/getting-started-with-github)
 *   [_Git It? How to use Git and Github_ by Fireship on YT](https://www.youtube.com/watch?v=HkdAHXoRtos)
 *   [Official Git documentation](https://git-scm.com/docs/gittutorial)
+*   [_Pro Git_, Scott Chacon and Ben Straub for Git SCM](https://git-scm.com/book/)
 
 ### Important concepts you should look into
 Perhaps not initially, but try to get through all these concepts to using Git effectively.
