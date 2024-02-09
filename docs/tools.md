@@ -236,6 +236,7 @@ Therefore, most version control systems (like Git) store the history in a separa
 
 ![.git folder in workspace](assets/3-git-folder.png)
 
+### The `.git` folder and the working directory
 If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata (among other things) needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
 
 The rest of the root folder contains the actual files of the project, and is called the "working directory". You make changes here, and then "commit" them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can "checkout" a different "branch" or "commit". Git then updates the working directory to match the version you selected.
@@ -258,6 +259,7 @@ The web interface analyses the contents of the `.git` folder (optionally, alongs
 
 Source: GitHub (this blog's repository)
 
+### Workflow with Git hosting services
 When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and "push" them back to the online repository. You can also "pull" changes from the online repository to your local machine. Look into [workflows](#resources-for-standard-practices-and-workflows) to learn more.
 
 ![Git flow](https://i.imgur.com/oodiCnB.pngg)
@@ -285,7 +287,7 @@ There are a few practices that are generally considered good when using Git, and
 
 *   **Make small, frequent commits**
 
-    This makes it easier to understand what's going on, and to revert *specific* changes if something goes wrong.
+    This makes it easier to understand what's going on, and to revert *specific* changes if something goes wrong. You can also merge changes from different branches more easily, especially if you're working with others.
 
 *   **Use branches**
 
