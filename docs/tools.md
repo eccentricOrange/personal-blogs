@@ -230,16 +230,16 @@ When you make a change, the software records the change, who made it, and when. 
 Read more from [Google's support page](https://support.google.com/docs/answer/190843).
 
 ### History tracking in source code with Git
-However, software (source code) files are a little different. Firstly, they're very simple [text files](#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of many files.
+However, software (source code) files are a little different. Firstly, they're very simple [text files](#deeper-dive-into-types-of-files) so it is impractical to integrate something as complex as a history pane into the file itself. Secondly, software projects are often made up of **many files**.
 
 Therefore, most version control systems (like Git) store the history in a separate location, and provide a way to view and revert changes across many files. In fact, Git is capable of keeping track of content (such as a variable or function name) across the various files in a project \[[source](https://www.youtube.com/watch?v=idLyobOhtO4)\]. In the case of Git, this history is stored in a `.git` folder in the root of the project. You can see that I have one even for this website:
 
 ![.git folder in workspace](assets/3-git-folder.png)
 
 ### The `.git` folder and the working directory
-If you wanted to share a Git repository with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata (among other things) needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
+If you wanted to share a **Git repository** with someone, sharing this folder alone is technically sufficient. It contains all the history and metadata (among other things) needed to work with the project, up to the latest [commit](https://www.atlassian.com/git/tutorials/saving-changes/git-commit) in every [branch](https://www.atlassian.com/git/tutorials/using-branches). You may enjoy seeing the contents of this folder, and can read about that from [Stack Overflow](https://stackoverflow.com/questions/19749105/what-is-the-git-folder) or [Git's documentation](https://git-scm.com/book/en/Git-Internals-Git-Objects) (though it's not necessary to understand these details to use Git).
 
-The rest of the root folder contains the actual files of the project, and is called the "working directory". You make changes here, and then "commit" them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can "checkout" a different "branch" or "commit". Git then updates the working directory to match the version you selected.
+The rest of the root folder contains the actual files of the project, and is called the **working directory**. You make changes here, and then **commit** them to the history using the `git` command line tool. Additionally, if you want to switch to a different version of the project, you can **checkout** a different **branch** or "commit". Git then updates the working directory to match the version you selected.
 
 ![Working directory and history](https://git-scm.com/book/en/v2/images/areas.png)
 
@@ -247,7 +247,7 @@ Source: Git documentation
 
 ### Online services
     
-GitHub, GitLab, and Bitbucket are online services that host Git repositories. They provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. They also provide a way to view the history of a project, and to collaborate with others. They do this by providing a web interface to the Git repository, and by providing a way to "clone" the repository to your local machine.
+GitHub, GitLab, and Bitbucket are online services that host Git repositories. They provide a way to share your code with others, and use cloud storage without grappling with traditional cloud storage services like Google Drive or Dropbox. They also provide a way to view the history of a project, and to collaborate with others. They do this by providing a web interface to the Git repository, and by providing a way to **clone** the repository to your local machine.
 
 The web interface analyses the contents of the `.git` folder (optionally, alongside other data), and visualizes many aspects of the project. For example, you can see the history of the project, the different branches, and the changes made in each commit. You can also view the contents of the working directory at any point in the history.
 
@@ -260,7 +260,7 @@ The web interface analyses the contents of the `.git` folder (optionally, alongs
 Source: GitHub (this blog's repository)
 
 ### Workflow with Git hosting services
-When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and "push" them back to the online repository. You can also "pull" changes from the online repository to your local machine. Look into [workflows](#resources-for-standard-practices-and-workflows) to learn more.
+When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and **push** them back to the online repository. You can also "pull" changes from the online repository to your local machine. Look into [workflows](#resources-for-standard-practices-and-workflows) to learn more.
 
 ![Git flow](https://i.imgur.com/oodiCnB.pngg)
 
@@ -293,7 +293,7 @@ There are a few practices that are generally considered good when using Git, and
 
     Branches are one of the core features of Git and let you maintain various "draft" versions of a project, alongside a "main" version. This allows you to work on different features of the project at the same time, and to experiment without breaking the main version of the project.
 
-    The expectation is that you will eventually "merge" these branches with the main version of the project (as opposed to permanently using different branches for unrelated code).
+    The expectation is that you will eventually **merge** these branches with the main version of the project (as opposed to permanently using different branches for unrelated code).
 
 *   **Use one repository per project**
 
