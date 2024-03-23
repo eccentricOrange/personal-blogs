@@ -3,14 +3,6 @@ layout: default
 title: Concepts I find cool
 ---
 
-<style>
-h2 {
-    // make underline go across entire page
-    border-bottom: 1px solid #eaecef;
-}
-</style>
-
-
 # Concepts I find cool
 
 These are things I learnt during classes, projects, or workshop, and I find them cool, fascinating, or useful. I hope you do too.
