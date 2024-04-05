@@ -15,5 +15,4 @@ I have an unusual problem. I often find even the commonest of tools and concepts
 
 It is meant to be a collection of all the tools and concepts that I run into, both in my courses, and otherwise. I hope you find them as cool as I do, and are hopefully inspired to learn more about them or something.
 
-*   You can find a lot of my work on [my GitHub profile for @eccentricOrange](https://github.com/eccentricOrange).
-*   I'm also a member of [Team RoverX](https://www.teamroverx.com/) at my college, and a lot of what I use/learn comes from them. Check out [our work](https://www.youtube.com/watch?v=JwVlNUayxL4)!
+You can find a lot of my work on [my GitHub profile for @eccentricOrange](https://github.com/eccentricOrange).
