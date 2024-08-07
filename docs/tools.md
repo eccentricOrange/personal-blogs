@@ -355,7 +355,7 @@ Source: [xkcd 1579](https://xkcd.com/1579/)
 
 Docker is a tool that allows you to isolate your development environment from the rest of your computer. You start from a bare environment; for example, an installation of a Ubuntu system:
 
-```DOCKERFILE
+```Dockerfile
 FROM ubuntu:22.04
 ```
 
@@ -363,7 +363,7 @@ FROM ubuntu:22.04
 
 <summary>An example of a complete Dockerfile</summary>
 
-```DOCKERFILE
+```Dockerfile
 FROM python:3.10.4
 
 # build and install SQLite because >=3.35 is needed
