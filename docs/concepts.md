@@ -30,9 +30,9 @@ The single-ended signal is referenced to ground, so the noise is added to the si
 The differential signal is referenced to itself, so the noise is added to the signal, but also to its "opposite". Guess what? We can simply subtract the two signals, and the noise will cancel out, leaving us with the original signal!
 
 
-<img src="https://i.stack.imgur.com/Fc6Nt.png" style="background-color: white;" alt="noise in differential"/>
+![noise in differential pairs](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DiffSignaling.png/1200px-DiffSignaling.png)
 
-(image from [StackExchange](https://electronics.stackexchange.com/questions/231297/noise-can-be-differential-or-common))
+(image from [WikiMedia](https://commons.wikimedia.org/wiki/File:DiffSignaling.png))
 
 
 This is why differential signals are used in many applications, such as USB, Ethernet, and HDMI. They are also used in high-speed digital circuits, such as FPGAs and microprocessors.
