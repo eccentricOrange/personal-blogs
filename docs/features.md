@@ -3,8 +3,15 @@ layout: default
 title: Random features and tips
 ---
 # Random features and tips
+{: .no_toc }
 
-## 1. The `any` and `all` keywords in Python
+## Table of Contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+## The `any` and `all` keywords in Python
 
 `any` behaves like the mathematical `OR` operator. It takes an iterable and returns `True` if at least one of the elements in the iterable is truthy. [See `any` documentation](https://docs.python.org/library/functions.html#any)
 
@@ -34,7 +41,7 @@ False
 
 See the [Python documentation](https://docs.python.org/3/library/functions.html) for more built-in functions.
 
-## 2. Python Docstring
+## Python Docstring
 These are strings used for documenting a Python module, class, function or method in a consistent format. They are used to generate online or offline documentation, and editors like VS Code will automatically pick up on them (and [Markdown](https://www.markdownguide.org/) formatting!) to give tooltips. [See `docstring` convention](https://www.python.org/dev/peps/pep-0257/).
 
 Here's an example from a project I'm working on:
@@ -91,12 +98,12 @@ It may also interest you to look into these:
 2.  **Guide to documenting Python code:** A look at the technical aspects of writing documentation for Python code, by Real Python. [Link to article](https://realpython.com/documenting-python-code/)
 3.  **Write The Docs:** A community/wiki with information on writing *good* documentation. [Link to website](https://www.writethedocs.org/).
 
-## 3. EEPROM in Arduino
+## EEPROM in Arduino
 While I have been using micro-controllers for a few years at thing point, I only recently discovered that the Arduino framework has built-in EEPROM support. This is a small amount of memory that can be used to store data that will persist even when the device is powered off. [See `EEPROM` documentation](https://docs.arduino.cc/learn/built-in-libraries/eeprom)
 
 This allows for some really cool behavior, such as storing settings right on the board.
 
-## 4. Named groups in Python regex
+## Named groups in Python regex
 For the uninitiated, using regex (regular expressions) is a way of matching patterns in strings. Here are some examples:
 
 ```python

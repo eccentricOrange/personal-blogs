@@ -4,15 +4,23 @@ title: Concepts I find cool
 ---
 
 # Concepts I find cool
+{: .no_toc }
 
 These are things I learnt during classes, projects, or workshop, and I find them cool, fascinating, or useful. I hope you do too.
+
+## Table of Contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
 
 {: .note-title }
 > **A note on CS/programming concepts**
 > 
 > I maintain a separate website for CS/programming concepts.. Even though it was designed for the CAIE Computer Science syllabus, it is useful for anyone learning CS/programming. You can find it at [https://eccentricOrange.github.io/CAIE-Computer-Science/](https://eccentricOrange.github.io/CAIE-Computer-Science/). I won't cover as many CS/programming concepts here.
 
-## 1.   Differential pairs
+## Differential pairs
 Think about a signal traveling in a wire. Specifically, think of a digital signal, which is just a voltage that is either high or low (1 or 0, 5V or 0V etc). This is called a **single-ended signal**, because it is referenced to a single point, usually ground.
 
 Now, let's do a weird thing. Let's take another wire, and copy the above signal onto it, but with the opposite polarity. So if the first wire is at 5V, the second wire is at 0V, and vice versa. This is called a **differential signal**, because it is referenced to two points, and the voltage between them is what matters.
