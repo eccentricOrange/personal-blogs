@@ -262,7 +262,7 @@ Source: GitHub (this blog's repository)
 ### Workflow with Git hosting services
 When you "clone" a repository, you download a copy of the history (`.git` folder) and working directory to your local machine. You can then make changes, and **push** them back to the online repository. You can also "pull" changes from the online repository to your local machine. Look into [workflows](#resources-for-standard-practices-and-workflows) to learn more.
 
-![Git flow](https://i.imgur.com/oodiCnB.pngg)
+![Git flow](https://i.imgur.com/oodiCnB.png)
 
 Source: [Reddit](https://www.reddit.com/r/git/comments/99ul9f/git_workflow_diagram_showcasing_the_role_of/)
 
@@ -359,7 +359,7 @@ Docker is a tool that allows you to isolate your development environment from th
 FROM ubuntu:22.04
 ```
 
-<details>
+<details markdown="1">
 
 <summary>An example of a complete Dockerfile</summary>
 
@@ -378,7 +378,9 @@ RUN export PATH="/usr/local/lib:$PATH"
 # get python requirements
 ADD requirements.txt requirements.txt
 RUN pip install -r requirements.txt pytest
+
 ```
+
 
 Source: [My own project, NPBC](https://github.com/eccentricOrange/npbc/blob/master/test.dockerfile)
 
