@@ -4,6 +4,8 @@ title: Developer tooling
 ---
 
 # Tools that I use in my work
+{: .no_toc }
+
 
 While I primarily work on robotics and embedded systems, I regularly use many software tools in my work. I find all of these fascinating, and would like to share that with you, and I hope you find something useful here. The content is specifically structured to target beginners and common issues not addressed in most tutorials.
 
@@ -11,7 +13,13 @@ In most cases I provide multiple resources for each tool/concept, so you can pic
 
 Note that nothing here is sponsored, and I am **not affiliated** with any of the companies that make these tools. I just like their products.
 
-## 1.   Sorting out environments, source code, and executables
+## Table of Contents
+{: .no_toc }
+
+1. TOC
+{:toc}
+
+## Sorting out environments, source code, and executables
 Did you just download an editor, wrote some code, and now you're wondering why it doesn't run? You're not alone.
 
 Among beginners, one of the most common frustrations I've seen has to do with actually setting up your computer to write and run code. Generally speaking, there are three solutions commonly presented to people:
@@ -194,7 +202,7 @@ I'll list out what I consider the best resources for some of the most common lan
 
 </dl>
 
-## 2.   Git for source control
+## Git for source control
 
 Many programmers have heard of [Git](https://git-scm.com/), and the related online services like [GitHub](https://github.com/), [GitLab](https://gitlab.com/), and [Bitbucket](https://bitbucket.org/). Yet many beginners struggle to use it effectively, and there seems to be need for a standard explanation of how these different tools fit together.
 
@@ -346,7 +354,7 @@ These likely aren't going to be useful initially, but they're good to know about
 
 Linus Torvalds visits Google to share his thoughts on git, the source control management system he created.
 
-## 3.   Docker, for isolating your development environment
+## Docker, for isolating your development environment
 [Dependency hell](https://en.wikipedia.org/wiki/Dependency_hell) is a problem that arises when you have multiple projects that depend on different versions of the same library, different operating systems, or otherwise different systems. For example, you might have one project that depends on version 1.0 of a library, and another that depends on version 2.0. If you install both of these on your computer, you'll run into problems, because the two versions of the library might not be compatible with each other. In fact, you may not be able to install them together in the first place.
 
 ![Dependency hell, xkcd 1579](https://imgs.xkcd.com/comics/tech_loops.png)
