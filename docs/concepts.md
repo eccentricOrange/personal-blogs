@@ -180,6 +180,9 @@ If you've been doing any amount of electronics, you won't be able to get very fa
 
 That said, people often find them a bit confusing (I did too, until somewhat recently). So let's break it down, see how they work with the laws of electricity, and then also see what the deal about weak and strong ones is.
 
+{: .tip }
+> **When we discuss the circuits, it would help you to get a piece of pen and paper, and actually solve for the current and voltage in the circuit. It's worth the effort.**
+
 ### The familiar circuits
 
 Consider that you want to read the state of a button on a microcontroller. You can go about this in two ways:
@@ -291,15 +294,18 @@ This is a consequence of KVL and KCL. For now, I will not show you how we obtain
 
 </details>
 
+If you're not familiar with these laws, I would strongly recommend you to practice a few examples by hand. Although I had been using pull-up and pull-down resistors for a while, I their working principles only clicked once I complete *Circuit Theory* and *Analog Electronics* in university, and had a very solid grasp of these laws.
+
+{: .important }
+> We're assuming `OUTPUT` to be a high-impedance input. This means that it doesn't draw any current from the circuit. This is usually the case with microcontrollers, but not always. If you're using a different device, you should check the datasheet to see if this is the case.
+
 #### Further reading
 *   [Ohm's Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/)
 *   [Kirchhoff's Voltage Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/kirchhoffs-voltage-law-kvl/)
 *   [Kirchhoff's Current Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/kirchhoffs-current-law-kcl/)
 *   [Voltage divider](https://www.electronics-tutorials.ws/dccircuits/voltage-divider.html)
 *   [Worked examples](https://www.circuitbread.com/tutorials/solving-circuits-using-kcl-and-kvl-dc-circuits)
-
-{: .important }
-> We're assuming `OUTPUT` to be a high-impedance input. This means that it doesn't draw any current from the circuit. This is usually the case with microcontrollers, but not always. If you're using a different device, you should check the datasheet to see if this is the case.
+*   [Why is high input impedance good?](https://electronics.stackexchange.com/questions/21787/why-is-high-input-impedance-good)
 
 ### Pull-down resistors
 

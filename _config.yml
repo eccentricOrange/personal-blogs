@@ -11,6 +11,7 @@ callouts:
     color: purple
   tip:
     color: green
+    title: tip
   tldr:
     color: green
     title: tl;dr
