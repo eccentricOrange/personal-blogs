@@ -3,6 +3,10 @@ layout: default
 title: Concepts I find cool
 ---
 
+<script async>
+window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},svg: {fontCache: 'global'},jax: ["input/TeX", "output/CommonHTML"]};(function () {var script = document.createElement('script');script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';script.async = true;document.head.appendChild(script);})();
+</script>
+
 # Concepts I find cool
 {: .no_toc }
 
@@ -166,3 +170,220 @@ my_bus.be_driven()
 ```
 
 Don't stress on stuff like the word `self` for now, it's a rather nuanced concept.
+
+## Pull-up and pull-down resistors
+
+If you've been doing any amount of electronics, you won't be able to get very far without hearing about pull-up and pull-down resistors. In general, people advise you to use one in one of these situations:
+*   When you're reading a button or a switch
+*   On the pin of a microcontroller that is connected to a sensor
+*   In protocols like I2C
+
+That said, people often find them a bit confusing (I did too, until somewhat recently). So let's break it down, see how they work with the laws of electricity, and then also see what the deal about weak and strong ones is.
+
+### The familiar circuits
+
+Consider that you want to read the state of a button on a microcontroller. You can go about this in two ways:
+
+1.  **Pressing the button is a logic HIGH:** In this case, assume that when the button is not pressed, you read a logic LOW, and when it is pressed, you read a logic HIGH. This is the more common way of doing things.
+
+    ![push button connected directly](assets/7-pb-1.png)
+
+    Think about what happens when the button is not pressed, however. What will the output actually be, since the circuit is open? You might think that if there is no connection to anything, it will be a logic LOW. But recall that a voltage is a potential **difference**. You always measure voltage with respect to something. If you don't connect the pin to anything, it's said to be in a "floating" state. It's not connected to anything, so it can't have a voltage. It's like asking "how far is the nearest shop?" without saying where you are. So the voltage is undefined, and it can be anything.
+
+    In practice, this means that the pin can read a logic HIGH even when the button is not pressed. On a microcontroller, oscilloscope, or a logic analyzer, you would observe this as noise in the circuit.
+
+    In such a situation, you're usually advised to use a pull-down resistor. We'll analyze a bit later how this works, but for now look at the circuit, and remember that the resistor is connected to ground.
+
+    ![push button with pull-down resistor](assets/8-pb-1-pd.png)
+
+2.  **Pressing the button is a logic LOW:** In this case, assume that when the button is not pressed, you read a logic HIGH, and when it is pressed, you read a logic LOW. This is less common, but it's still used.
+
+    
+    ![push button connected directly](assets/9-pb-0.png)
+
+    Similar to the previous case, when the button is not pressed, the voltage is undefined. In this case, you're advised to use a pull-up resistor. We'll analyze this later too, but for now, remember that the resistor is connected to VCC (the positive supply voltage, which in our case is 5V).
+
+    ![push button with pull-up resistor](assets/10-pb-0-pu.png)
+
+
+### Pre-requisites: Ohm's Law, Kirchhoff's Laws, and the voltage divider rule
+
+Before we proceed, let's quickly review Ohm's Law and Kirchhoff's Laws, in case you're not familiar with them.
+
+<details markdown="1">
+
+<summary>Ohm's Law</summary>
+
+This is the most fundamental law in electronics. It states that the current flowing through a conductor between two points is directly proportional to the voltage across the two points. The constant of proportionality is the resistance of the conductor. Mathematically,
+
+$$V = IR$$
+
+where:
+*   $V$ is the voltage across the conductor
+*   $I$ is the current flowing through the conductor
+*   $R$ is the resistance of the conductor.
+
+{: .note-title }
+> **Example**
+>
+> What is the voltage across a 10 ohm resistor if a current of 2 amps is flowing through it?
+>
+> $$V = IR = 2\  \mathrm{A} \times 10\ \mathrm {\Omega} = 20\ \mathrm{V}$$
+
+</details>
+
+<details markdown="1">
+
+<summary>Kirchhoff's Voltage Law (KVL)</summary>
+
+This law states that the sum of the voltages around any closed loop in a circuit is zero. This is a consequence of the conservation of energy.
+
+{: .note-title }
+> **What does this mean for us?**
+>
+> This gives us a very easy way to find the voltage across a resistor. You simple consider the voltage at on both ends of the resistor as $V_1$ and $V_2$, and then write $V_R = V_2 - V_1$. If you know the current, you can find the voltage across the resistor.
+
+In combination with Ohm's law, we can write the voltage across a resistor as:
+
+$$V_2 - V_1 = IR$$
+
+or, the current as
+
+$$I = \frac{V_2 - V_1}{R}$$
+
+where:
+*   $V_1$ is the voltage at one end of the resistor
+*   $V_2$ is the voltage at the other end of the resistor
+*   $I$ is the current flowing through the resistor
+*   $R$ is the resistance of the resistor.
+
+</details>
+
+<details markdown="1">
+
+<summary>Kirchhoff's Current Law (KCL)</summary>
+
+This law states that the sum of currents entering a node is equal to the sum of currents leaving the node. This is a consequence of the conservation of charge.
+
+{: .note-title }
+> **What does this mean for us?**
+>
+> This gives us a very easy way to find the current through a multiple resistors when connected in series. It will always be the same!
+
+
+</details>
+
+<details markdown="1">
+
+<summary>Voltage Divider Rule</summary>
+This is a consequence of KVL and KCL. For now, I will not show you how we obtain this rule, but I will show you how to use it. In essence, if you put two resistors in series and apply a voltage across the pair, the voltage across each resistor can eb calculated very specifically, and its value depends on the ratio of the two resistors.
+
+{: .note-title }
+> **Voltage Divider Rule**
+>
+> If you have two resistors $R_1$ and $R_2$ in series, and you apply a voltage $V$ across the pair, then the voltage across $R_1$ is
+>
+> $$V_1 = V \times \frac{R_1}{R_1 + R_2}$$
+>
+> and the voltage across $R_2$ is
+>
+> $$V_2 = V \times \frac{R_2}{R_1 + R_2}$$
+
+</details>
+
+#### Further reading
+*   [Ohm's Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/)
+*   [Kirchhoff's Voltage Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/kirchhoffs-voltage-law-kvl/)
+*   [Kirchhoff's Current Law](https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/kirchhoffs-current-law-kcl/)
+*   [Voltage divider](https://www.electronics-tutorials.ws/dccircuits/voltage-divider.html)
+*   [Worked examples](https://www.circuitbread.com/tutorials/solving-circuits-using-kcl-and-kvl-dc-circuits)
+
+{: .important }
+> We're assuming `OUTPUT` to be a high-impedance input. This means that it doesn't draw any current from the circuit. This is usually the case with microcontrollers, but not always. If you're using a different device, you should check the datasheet to see if this is the case.
+
+### Pull-down resistors
+
+Let us revisit the circuit with the pull-down resistor. It's easiest to understand how this works simply by analyzing the circuit in cases when the switch is pressed and when it is not pressed.
+
+![push button with pull-down resistor](assets/8-pb-1-pd.png)
+
+#### When the button is not pressed
+This behaves like an open circuit. So we're simply connecting to the output via a resistor to ground.
+
+![push button with pull-down resistor, not pressed](assets/11-pb-1-pd-not-pressed.png)
+
+Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
+
+On one end of the resistor, we've connected to ground, so the voltage is 0 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
+
+*   $V_2 = x$
+*   $V_1 = 0$
+*   $R = 10\ \mathrm{k\Omega}$
+*   $I = 0$
+
+Now using KVL and Ohm's Law, we can write:
+
+$$V_2 - V_1 = IR$$
+
+or,
+
+$$V_2 = V_1 + IR$$
+
+Substituting in the values, we get:
+
+$$x = 0\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 0\ \mathrm{V}$$
+
+Therefore, the voltage at `OUTPUT` is 0 V when the button is not pressed, and the circuit reads a logic LOW.
+
+#### When the button is pressed
+This behaves like a short circuit. So we're simply connecting to the output to VCC.
+
+![push button with pull-down resistor, pressed](assets/12-pb-1-pd-pressed.png)
+
+Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+
+This time, we don't need to find out what the output voltage is. We know that it's connected to VCC, which is 5 V. So our circuit reads a logic HIGH.
+
+### Pull-up resistors
+
+Let us revisit the circuit with the pull-up resistor. It's easiest to understand how this works simply by analyzing the circuit in cases when the switch is pressed and when it is not pressed.
+
+![push button with pull-up resistor](assets/10-pb-0-pu.png)
+
+#### When the button is not pressed
+This behaves like an open circuit. So we're simply connecting to the output via a resistor to VCC.
+
+![push button with pull-up resistor, not pressed](assets/13-pb-0-pu-not-pressed.png)
+
+Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
+
+On one end of the resistor, we've connected to VCC, so the voltage is 5 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
+
+*   $V_2 = 5\ \mathrm{V}$
+*   $V_1 = x$
+*   $R = 10\ \mathrm{k\Omega}$
+*   $I = 0$
+
+Now using KVL and Ohm's Law, we can write:
+
+$$V_2 - V_1 = IR$$
+
+or,
+
+$$V_2 = V_1 + IR$$
+
+Substituting in the values, we get:
+
+$$x = 5\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 5\ \mathrm{V}$$
+
+Therefore, the voltage at `OUTPUT` is 5 V when the button is not pressed, and the circuit reads a logic HIGH.
+
+#### When the button is pressed
+This behaves like a short circuit. So we're simply connecting to the output to ground.
+
+![push button with pull-up resistor, pressed](assets/14-pb-0-pu-pressed.png)
+
+Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+
+This time, we don't need to find out what the output voltage is. We know that it's connected to ground, which is 0 V. So our circuit reads a logic LOW.
+
