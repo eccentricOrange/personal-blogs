@@ -415,7 +415,7 @@ The situation above works fine when you have full control of the both the circui
 
 > What if I want to allow someone else to add another pull-up or pull-down resistor, but I still want my circuit to have a default state that I designed?
 
-I ran into this problem fairly recently. I'm designing a circuit board with a professor at my university that is intended to be a development platform for students to learn Control Systems. One of the components requires a certain voltage to be put into sleep or normal mode. We want to add a pull-down resistor to make sure that it works (normal/awake) mode without needing to connect any additional components. However, our system deals with somewhat high currents (25 V, 5 A), so it's reasonable to expect that someone might want to add a pull-up resistor to make it sleep by default (for safety reasons).
+I ran into this problem fairly recently. I'm designing a circuit board with a professor at my university that is intended to be a development platform for students to learn *Control Systems*. One of the components requires a voltage to be put into sleep (logic HIGH) or normal/awake mode (logic LOW). We want to add a pull-down resistor to make sure that it works (normal/awake mode) without needing to connect any additional components. However, our system deals with somewhat high currents (25 V, 5-10 A), so it's reasonable to expect that someone might want to add a pull-up resistor to make it sleep by default (for safety reasons).
 
 Both goals are fairly reasonable, so we cannot choose one. So how do we reconcile them?
 
@@ -476,6 +476,11 @@ It's best we understand this by example, so let's lay down the objectives for on
     ![weak pull-down resistor with external pull-up resistor and control signal](assets/18-weak-pd-external-pu-control.png)
 
     Well, if we think about it, the control signal is directly connected to `OUTPUT`. So, the voltage at `OUTPUT` is always the voltage at `CONTROL`. Therefore, we don't need to care what happens with the pull-up and pull-down resistors. The control signal will always override them.
+
+{: .important }
+> * Lower resistance is a stronger pull-up or pull-down resistor.
+> * Higher resistance is a weaker pull-up or pull-down resistor.
+> * The default state of the circuit is determined by the weakest pull-up or pull-down resistor in the circuit, and can be overridden by a stronger pull-up or pull-down resistor.
 
 ### Current and power consumption
 Now that we've understood how pull-up and pull-down resistors work, we should keep in mind that they do consume power. This is because they are connected to a voltage source, and current flows through them. The power consumed by a resistor is given by:
