@@ -9,27 +9,27 @@
 
 <url>
   <loc>https://eccentricorange.netlify.app/</loc>
-  <lastmod>2023-12-19T21:27:17+00:00</lastmod>
+  <lastmod>2024-10-26T08:40:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://eccentricorange.netlify.app/concepts</loc>
-  <lastmod>2023-12-19T21:27:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eccentricorange.netlify.app/features</loc>
-  <lastmod>2023-12-19T21:27:17+00:00</lastmod>
+  <lastmod>2024-10-26T08:40:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eccentricorange.netlify.app/tools</loc>
-  <lastmod>2023-12-19T21:27:17+00:00</lastmod>
+  <lastmod>2024-10-26T08:40:50+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://eccentricorange.netlify.app/features</loc>
+  <lastmod>2024-10-26T08:40:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://eccentricorange.netlify.app/non-tech</loc>
-  <lastmod>2023-12-19T21:27:17+00:00</lastmod>
+  <lastmod>2024-10-26T08:40:50+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
