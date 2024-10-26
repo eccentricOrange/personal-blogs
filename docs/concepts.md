@@ -208,7 +208,7 @@ Consider that you want to read the state of a button on a microcontroller. You c
 
 ### Pre-requisites: Ohm's Law, Kirchhoff's Laws, and the voltage divider rule
 
-Before we proceed, let's quickly review Ohm's Law and Kirchhoff's Laws, in case you're not familiar with them.
+Before we proceed, let's quickly review Ohm's Law and Kirchhoff's Laws, in case you're not familiar with them. Click on the dropdowns to see the explanations.
 
 <details markdown="1">
 
