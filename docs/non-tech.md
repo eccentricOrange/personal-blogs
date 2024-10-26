@@ -237,7 +237,7 @@ Let's start with a simple to-do list app, in whatever programming language you l
 8. **GUI:** Why not try to learn some kind of GUI framework? Maybe you try web/app dev, or maybe something is built into the your language of choice.
 9. **Multi-user:** By this point, your family/friends has taken note of your work. So you try to implement some basic user management.
 10. **OOP:** Now your code is too complex. Break it down, and use OOP (or whatever) to clean it up.
-11. **Database:** Someone uttered this word to you. You decide to explore what it means. Do a basic course on it, and then try to relace your CSV file with a proper DB.
+11. **Database:** Someone uttered this word to you. You decide to explore what it means. Do a basic course on it, and then try to replace your CSV file with a proper DB.
 12. **Server-side separation:** Why not see if you can make your application accessible to at least everyone on your home Wi-Fi?
 13. **Web-dev:** Look beyond your own home. Make it a website!
 14. **CI/CD:** Man, it's really tedious to republish the website every time you make a tiny change.
@@ -301,7 +301,7 @@ Also, keep in mind that this has risk of data loss (from Windows especially). So
 
 ### Resources/references
 - **WSL**: [https://learn.microsoft.com/en-us/windows/wsl/](https://learn.microsoft.com/en-us/windows/wsl/)
-- **Official Ubuntu install tutortial**, including dual-boot instructions, but recommend you to search online and at least watch some videos: [https://ubuntu.com/tutorials/install-ubuntu-desktop]()
+- **Official Ubuntu install tutorial**, including dual-boot instructions, but recommend you to search online and at least watch some videos: [https://ubuntu.com/tutorials/install-ubuntu-desktop]()
 - **Ubuntu VM:** [https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox)
 - **[my own list] Docker resources:** [https://eccentricorange.netlify.app/tools#3---docker-for-isolating-your-development-environment](https://eccentricorange.netlify.app/tools#3---docker-for-isolating-your-development-environment)
 - **GitHub codespaces:** [https://docs.github.com/en/codespaces/overview, https://code.visualstudio.com/docs/remote/codespaces](https://docs.github.com/en/codespaces/overview, https://code.visualstudio.com/docs/remote/codespaces)
