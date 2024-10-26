@@ -176,7 +176,7 @@ Don't stress on stuff like the word `self` for now, it's a rather nuanced concep
 If you've been doing any amount of electronics, you won't be able to get very far without hearing about pull-up and pull-down resistors. In general, people advise you to use one in one of these situations:
 *   When you're reading a button or a switch
 *   On the pin of a microcontroller that is connected to a sensor
-*   In protocols like I2C
+*   In protocols like I2C.
 
 That said, people often find them a bit confusing (I did too, until somewhat recently). So let's break it down, see how they work with the laws of electricity, and then also see what the deal about weak and strong ones is.
 
@@ -188,7 +188,7 @@ Consider that you want to read the state of a button on a microcontroller. You c
 
     ![push button connected directly](assets/7-pb-1.png)
 
-    Think about what happens when the button is not pressed, however. What will the output actually be, since the circuit is open? You might think that if there is no connection to anything, it will be a logic LOW. But recall that a voltage is a potential **difference**. You always measure voltage with respect to something. If you don't connect the pin to anything, it's said to be in a "floating" state. It's not connected to anything, so it can't have a voltage. It's like asking "how far is the nearest shop?" without saying where you are. So the voltage is undefined, and it can be anything.
+    Think about what happens when the button is not pressed, however. What will the output actually be, since the circuit is open? You might think that if there is no connection to anything, it will be a logic LOW (i.e., GND or 0 V). But recall that a voltage is a potential **difference**. You always measure voltage with respect to something. If you don't connect the pin to anything, it's said to be in a "floating" state. It's not connected to anything, so it can't have a voltage. It's like asking "how far is the that shop?" without saying where you are; one cannot calculate that distance without know the locations of both you and that shop. So the voltage is undefined.
 
     In practice, this means that the pin can read a logic HIGH even when the button is not pressed. On a microcontroller, oscilloscope, or a logic analyzer, you would observe this as noise in the circuit.
 
