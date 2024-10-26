@@ -415,9 +415,9 @@ The situation above works fine when you have full control of the both the circui
 
 > What if I want to allow someone else to add another pull-up or pull-down resistor, but I still want my circuit to have a default state that I designed?
 
-I ran into this problem fairly recently. I'm designing a circuit board with a professor at my university that is intended to be a development platform for students to learn Control Systems. One of the components requires a certain voltage to be put into sleep or normal mode. We want to add a pull-down resistor to make sure that it works (normal/awake) mode without needing to connect any additional components. However, it deals with somewhat high currents (25 V, 5 A), so it's reasonable to expect that someone might want to add a pull-up resistor to make it sleep by default.
+I ran into this problem fairly recently. I'm designing a circuit board with a professor at my university that is intended to be a development platform for students to learn Control Systems. One of the components requires a certain voltage to be put into sleep or normal mode. We want to add a pull-down resistor to make sure that it works (normal/awake) mode without needing to connect any additional components. However, our system deals with somewhat high currents (25 V, 5 A), so it's reasonable to expect that someone might want to add a pull-up resistor to make it sleep by default (for safety reasons).
 
-Both goals are fairly reasonable, so we cannot choose one. So how do we do this?
+Both goals are fairly reasonable, so we cannot choose one. So how do we reconcile them?
 
 The solution is to use a **weak pull-up or pull-down resistor**. In essence, you can override the default state of the circuit by adding a stronger pull-up or pull-down resistor. But if you don't add anything, the default state is maintained.
 
@@ -467,7 +467,7 @@ It's best we understand this by example, so let's lay down the objectives for on
     As an exercise, you can try to see what happens in the following cases:
     1.  The external resistance is 1 kilo-ohm.
     2.  The external resistance is also 100 kilo-ohm.
-    3.  Someone connects another pull-down resistor of 10 kilo-ohm in parallel to the internal pull-down resistor (hint: model this as resistors in parallel).
+    3.  Someone connects an external pull-down resistor of 10 kilo-ohm (hint: model this as resistors in parallel).
 
 *   **Objective 3: Overriding both the default state and the external resistor**
 
