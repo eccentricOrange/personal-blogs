@@ -70,7 +70,7 @@ However, you may have noticed that when you double-click a file (such as a docum
 If you take any formal computer science course, you might hear about two ways of converting your code (such a C++, Python, or Java source file) into something a computer can understand: using [compilers or interpreters](https://www.programiz.com/article/difference-compiler-interpreter). In both cases, you use an executable with your source code. That executable then either runs your code (interpreter case) or gives you another executable you can run (compiler case).
 
 {: .important }
-> This process is independent of your IDE/editor. You **must have the interprerer/compiler installed** in order for your editor to be able to do anything with it. Your editor is just a tool that helps you write code.
+> This process is independent of your IDE/editor. You **must have the interpreter/compiler installed** in order for your editor to be able to do anything with it. Your editor is just a tool that helps you write code.
 > 
 > <details markdown=1>
 >
@@ -349,7 +349,7 @@ These likely aren't going to be useful initially, but they're good to know about
 *   [_Comparing Git workflows_, Atlassian](https://www.atlassian.com/git/tutorials/comparing-workflows)
 *   [_GitHub flow_, GitHub](https://docs.github.com/en/get-started/using-github/github-flow)
 
-### Interesting tidbit
+### Interesting titbit
 [_Tech Talk: Linus Torvalds on git_, YT video by Google](https://www.youtube.com/watch?v=4XpnKHJAok8)
 
 Linus Torvalds visits Google to share his thoughts on git, the source control management system he created.
@@ -434,7 +434,7 @@ Pick whatever you're most comfortable with.
 > 
 > Look into using Docker Devcontainers with [VS Code](https://code.visualstudio.com/). Initially, you can rely on the pre-built Dockerfiles and images, and then you can start to build your own as you get more comfortable with it. Read more: [Developing inside a Container](https://code.visualstudio.com/docs/devcontainers/containers).
 
-### Interesting tidbits
+### Interesting titbits
 It will likely be a while before any of these are useful (or practical to even play around with) for most people, especially when getting started. But they all are commonplace in the industry, and interesting in their own right. 
 *   [_Top 8 Docker Best Practices for using Docker in Production_, video by TechWorld with Nana](https://www.youtube.com/watch?v=8vXoMqWgbQQ)
 *   [Docker Compose](https://docs.docker.com/compose/), for managing multiple containers simultaneously

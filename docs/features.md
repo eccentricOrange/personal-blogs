@@ -101,7 +101,7 @@ It may also interest you to look into these:
 ## EEPROM in Arduino
 While I have been using micro-controllers for a few years at thing point, I only recently discovered that the Arduino framework has built-in EEPROM support. This is a small amount of memory that can be used to store data that will persist even when the device is powered off. [See `EEPROM` documentation](https://docs.arduino.cc/learn/built-in-libraries/eeprom)
 
-This allows for some really cool behavior, such as storing settings right on the board.
+This allows for some really cool behaviour, such as storing settings right on the board.
 
 ## Named groups in Python regex
 For the uninitiated, using regex (regular expressions) is a way of matching patterns in strings. Here are some examples:
