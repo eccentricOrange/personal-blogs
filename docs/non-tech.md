@@ -184,7 +184,7 @@ Some suggestions (these are the only  domains I know about):
 - [electronics] make a simple IoT system. for example, control some LEDs with your phone wirelessly. 
   
   {: .warning }
-  > PLEASE DON'T PLAY WITH MAINS VOLTAGE WITHOUT EXPERIENCE AND/OR COMPETENT SUPERVISION, stick to simple battery-operated stuff
+  > PLEASE **DON'T PLAY WITH MAINS VOLTAGE** WITHOUT EXPERIENCE AND/OR COMPETENT SUPERVISION, stick to simple battery-operated stuff
   
 - [programming] write a to-do app. start with something really basic, maybe just a simple array. evolve it into either a full-fledged native app or maybe something that can support multiple users on a server
 
