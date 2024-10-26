@@ -1,7 +1,6 @@
 theme: just-the-docs
 title: Orange Robotics
 description: My personal blog, to share the technologies that fascinate me.
-color_scheme: dark
 
 # Make the source folder /docs instead of root
 source: docs
