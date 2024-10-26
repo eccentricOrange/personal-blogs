@@ -307,42 +307,44 @@ Let us revisit the circuit with the pull-down resistor. It's easiest to understa
 
 ![push button with pull-down resistor](assets/8-pb-1-pd.png)
 
-#### When the button is not pressed
-This behaves like an open circuit. So we're simply connecting to the output via a resistor to ground.
+1.  **When the button is not pressed**
 
-![push button with pull-down resistor, not pressed](assets/11-pb-1-pd-not-pressed.png)
+    This behaves like an open circuit. So we're simply connecting to the output via a resistor to ground.
 
-Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
+    ![push button with pull-down resistor, not pressed](assets/11-pb-1-pd-not-pressed.png)
 
-On one end of the resistor, we've connected to ground, so the voltage is 0 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
+    Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
 
-*   $V_2 = x$
-*   $V_1 = 0$
-*   $R = 10\ \mathrm{k\Omega}$
-*   $I = 0$
+    On one end of the resistor, we've connected to ground, so the voltage is 0 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
 
-Now using KVL and Ohm's Law, we can write:
+    *   $V_2 = x$
+    *   $V_1 = 0$
+    *   $R = 10\ \mathrm{k\Omega}$
+    *   $I = 0$
 
-$$V_2 - V_1 = IR$$
+    Now using KVL and Ohm's Law, we can write:
 
-or,
+    $$V_2 - V_1 = IR$$
 
-$$V_2 = V_1 + IR$$
+    or,
 
-Substituting in the values, we get:
+    $$V_2 = V_1 + IR$$
 
-$$x = 0\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 0\ \mathrm{V}$$
+    Substituting in the values, we get:
 
-Therefore, the voltage at `OUTPUT` is 0 V when the button is not pressed, and the circuit reads a logic LOW.
+    $$x = 0\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 0\ \mathrm{V}$$
 
-#### When the button is pressed
-This behaves like a short circuit. So we're simply connecting to the output to VCC.
+    Therefore, the voltage at `OUTPUT` is 0 V when the button is not pressed, and the circuit reads a logic LOW.
 
-![push button with pull-down resistor, pressed](assets/12-pb-1-pd-pressed.png)
+2.  **When the button is pressed**
 
-Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+    This behaves like a short circuit. So we're simply connecting to the output to VCC.
 
-This time, we don't need to find out what the output voltage is. We know that it's connected to VCC, which is 5 V. So our circuit reads a logic HIGH.
+    ![push button with pull-down resistor, pressed](assets/12-pb-1-pd-pressed.png)
+
+    Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+
+    This time, we don't need to find out what the output voltage is. We know that it's connected to VCC, which is 5 V. So our circuit reads a logic HIGH.
 
 ### Pull-up resistors
 
@@ -350,40 +352,42 @@ Let us revisit the circuit with the pull-up resistor. It's easiest to understand
 
 ![push button with pull-up resistor](assets/10-pb-0-pu.png)
 
-#### When the button is not pressed
-This behaves like an open circuit. So we're simply connecting to the output via a resistor to VCC.
+1.  **When the button is not pressed**
 
-![push button with pull-up resistor, not pressed](assets/13-pb-0-pu-not-pressed.png)
+    This behaves like an open circuit. So we're simply connecting to the output via a resistor to VCC.
 
-Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
+    ![push button with pull-up resistor, not pressed](assets/13-pb-0-pu-not-pressed.png)
 
-On one end of the resistor, we've connected to VCC, so the voltage is 5 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
+    Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so the current through the resistor is zero.
 
-*   $V_2 = 5\ \mathrm{V}$
-*   $V_1 = x$
-*   $R = 10\ \mathrm{k\Omega}$
-*   $I = 0$
+    On one end of the resistor, we've connected to VCC, so the voltage is 5 V. On the other end, we're connected to the output; we don't know this voltage so let's call it $x$. We can already see that the resistance is 10 kilo-ohms. So we can write:
 
-Now using KVL and Ohm's Law, we can write:
+    *   $V_2 = 5\ \mathrm{V}$
+    *   $V_1 = x$
+    *   $R = 10\ \mathrm{k\Omega}$
+    *   $I = 0$
 
-$$V_2 - V_1 = IR$$
+    Now using KVL and Ohm's Law, we can write:
 
-or,
+    $$V_2 - V_1 = IR$$
 
-$$V_2 = V_1 + IR$$
+    or,
 
-Substituting in the values, we get:
+    $$V_2 = V_1 + IR$$
 
-$$x = 5\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 5\ \mathrm{V}$$
+    Substituting in the values, we get:
 
-Therefore, the voltage at `OUTPUT` is 5 V when the button is not pressed, and the circuit reads a logic HIGH.
+    $$x = 5\ \mathrm{V} + (0\ \mathrm{A} \times 10\ \mathrm{k\Omega}) = 5\ \mathrm{V}$$
 
-#### When the button is pressed
-This behaves like a short circuit. So we're simply connecting to the output to ground.
+    Therefore, the voltage at `OUTPUT` is 5 V when the button is not pressed, and the circuit reads a logic HIGH.
 
-![push button with pull-up resistor, pressed](assets/14-pb-0-pu-pressed.png)
+2. **When the button is pressed**
 
-Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+    This behaves like a short circuit. So we're simply connecting to the output to ground.
 
-This time, we don't need to find out what the output voltage is. We know that it's connected to ground, which is 0 V. So our circuit reads a logic LOW.
+    ![push button with pull-up resistor, pressed](assets/14-pb-0-pu-pressed.png)
+
+    Now, think about the voltage reading at `OUTPUT`. The output doesn't draw any current, so all the current flows through the resistor only.
+
+    This time, we don't need to find out what the output voltage is. We know that it's connected to ground, which is 0 V. So our circuit reads a logic LOW.
 
