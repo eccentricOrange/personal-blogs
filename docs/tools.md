@@ -192,7 +192,7 @@ I'll list out what I consider the best resources for some of the most common lan
 
 *   [_Missing Semester_ by MIT CSAIL](https://missing.csail.mit.edu/)
 *   [_Bash in 100 Seconds_ by YouTube channel Fireship](https://www.youtube.com/watch?v=I4EWvMFj37)
-*   [Setting up languages in VS Code](https://code.visualstudio.com/docs/languages/): The VS Code team has documented the process of setting up the following languages with their editor (at the time of writing):
+*   [Setting up languages in VS Code](https://code.visualstudio.com/docs/languages/overview#_language-specific-documentation): The VS Code team has documented the process of setting up the following languages with their editor (at the time of writing):
 
     C++, C#, CSS, Dart, Dockerfile, F#, Go, HTML, Java, JavaScript, JSON, Julia, Less, Markdown, PHP, PowerShell, Python, R, Ruby, Rust, SCSS, T-SQL, TypeScript
 
