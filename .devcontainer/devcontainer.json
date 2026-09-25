@@ -15,6 +15,10 @@
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created.
+	"containerEnv": {
+		"BUNDLE_PATH": "/home/vscode/.bundle",
+		"GEM_HOME": "/home/vscode/.bundle"
+	},
 	"postCreateCommand": "bundle install"
 
 	// Configure tool-specific properties.
